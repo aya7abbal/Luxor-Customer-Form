@@ -1,42 +1,28 @@
-
-let timer;
-
-document.addEventListener('input', e => {
-  const el = e.target;
-  
-  if( el.matches('[data-color]') ) {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      document.documentElement.style.setProperty(`--color-${el.dataset.color}`, el.value);
-    }, 100)
-  }
-})
-
-
 // When option checked, show input area
-function otherSelected(id,actionId,textCheck) {
-  console.log(document.getElementById(id).value)
-    if (document.getElementById(id).value == textCheck) {
-        document.getElementById(actionId).style.display = "block";
-    } else {
-        document.getElementById(actionId).style.display = "none";
-    }
-}
-
-function checkBox(id, actionId) {
-  const element = document.getElementById(id)
-  toggleAttr(element)
-      if (element.hasAttribute('sinkOff')) {
-      document.getElementById(actionId).style.display = "block";
-  } else {
-      document.getElementById(actionId).style.display = "none";
+function showHiddenFields(id, actionId, textCheck = null, select = true) {
+  const element = document.getElementById(id);
+  const action = document.getElementById(actionId);
+  switch (select) {
+    case true:
+      if (element.value == textCheck) {
+        action.style.display = "block";
+      } else {
+        action.style.display = "none";
+      }
+    case false:
+      toggleAttr(element);
+      if (element.hasAttribute("sinkOff")) {
+        action.style.display = "block";
+      } else {
+        action.style.display = "none";
+      }
   }
 }
 
 function toggleAttr(element) {
-  if(element.hasAttribute('sinkOff')){
-    element.removeAttribute('sinkOff')
-  }else{
-      element.setAttribute('sinkOff', true)
+  if (element.hasAttribute("sinkOff")) {
+    element.removeAttribute("sinkOff");
+  } else {
+    element.setAttribute("sinkOff", true);
   }
 }

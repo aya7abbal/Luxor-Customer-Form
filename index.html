@@ -113,7 +113,7 @@
             id="learnHow"
             class="form-select input-container"
             required
-            onchange="otherSelected('learnHow','otherBox','Other')"
+            onchange="showHiddenFields('learnHow','otherBox','Other', false)"
           >
             <option value="">Choose one...</option>
             <option value="Google">Google</option>
@@ -196,7 +196,7 @@
             <div class="no">
               <div>No</div>
               <div class="cbx"></div>
-              <input  id="svgOff" onclick="checkBox('svgOff', 'checkText')" type="checkbox" value="no"/>
+              <input  id="svgOff" onClick="showHiddenFields('svgOff', 'checkText')" type="checkbox" value="no"/>
               <label for="cbx"></label>
               <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
                 <path d="M2 8.36364L6.23077 12L13 2"></path>
@@ -319,7 +319,7 @@
             <div class="yes">
               <div>Yes</div>
               <div class="cbx" ></div>
-              <input type="checkbox" id="tearYes" onclick="checkBox('tearYes', 'tearText')"/>
+              <input type="checkbox" id="tearYes" onClick="showHiddenFields('tearYes', 'tearText')"/>
               <label for="cbxYes"></label>
               <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
                 <path d="M2 8.36364L6.23077 12L13 2"></path>
