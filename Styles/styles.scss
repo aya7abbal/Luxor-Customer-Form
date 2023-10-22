@@ -155,6 +155,10 @@ form {
     }
   }
 }
+.required:after {
+  content:" *";
+  color: red;
+}
 // Submit Button
 /* CSS */
 .button-1 {

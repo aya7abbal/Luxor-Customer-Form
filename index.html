@@ -50,51 +50,65 @@
     <div class="box">
       <form id="customer-form" class="row g-3 shadow p-3 mx-4 mx-md-5">
         <!-- Date -->
-        <div class="col-md-6 col-12 input-container">
+        <div class="col-md-6 input-container">
           <input type="date" name="date" id="date" required="" />
 
-          <label for="date">Today's Date </label>
+          <label for="date" class="required">Today's Date </label>
         </div>
 
         <!-- Time -->
-        <div class="col-md-6 col-12 input-container">
+        <div class="col-md-6 input-container">
           <input type="time" name="time" id="aptTime" required="" />
           <label for="aptTime">Appointment Time</label>
         </div>
         <!-- Name -->
         <div class="col-12 col-md-6 input-container">
           <input type="text" name="name" required />
-          <label for="name">Name</label>
-        </div>
-
-        <!-- Address -->
-        <div class="col-12 col-md-6 input-container">
-          <input type="text" name="address" required id="address" />
-          <label for="address">Address</label>
-        </div>
-        <!-- Cont. Ref. -->
-        <div class="col-12 input-container">
-          <input type="text" name="cont-ref" id="contRef" required="" />
-          <label for="contRef">Cont. Ref.</label>
-        </div>
-        <!-- Phone Number -->
-        <div class="col-md-6 col-12 input-container">
-          <input type="number" name="mobile" id="mobile" required />
-          <label for="mobile">Phone Number</label>
+          <label for="name" class="required">Name</label>
         </div>
         <!--Email -->
         <div class="col-md-6 col-12 input-container">
-          <input type="emal" name="email" required id="email" />
-          <label for="email">Email</label>
+          <input type="email" name="email" required id="email" />
+          <label for="email" class="required">Email</label>
         </div>
+        <!-- Address -->
+        <div class="col-12 input-container">
+          <input type="text" name="address" required id="address" />
+          <label for="address" class="required">Address Line 1</label>
+        </div>
+        <div class="col-12 col-md-6 input-container">
+          <input type="text" name="city" required id="city" />
+          <label for="city" class="required">City</label>
+        </div>
+        <div class="col-12 col-md-6 input-container">
+          <input type="text" name="zipcode" required id="zipcode" />
+          <label for="zipcode" class="required">Zip Code</label>
+        </div>
+        <div class="col-12 col-md-6 input-container">
+          <input type="text" name="state" required id="state" />
+          <label for="state" class="required">State</label>
+        </div>
+
+        <!-- Phone Number -->
         <div class="col-md-6 col-12 input-container">
-          <input type="text" name="testtest" required id="cons" />
-          <label for="specialist">Luxor's Sales Specialist:</label>
+          <input type="number" name="mobile" id="mobile" required />
+          <label for="mobile" class="required">Phone Number</label>
+        </div>
+        <!-- Cont. Ref. -->
+        <div class="col-12 input-container">
+          <input type="text" id="contRef" name="cont-ref" required="" />
+          <label for="contRef">Cont. Ref.</label>
+        </div>
+
+        <!-- Sales Consultant -->
+        <div class="col-md-6 col-12 input-container">
+          <input type="text" name="specialist" required id="cons" />
+          <label for="cons" class="required">Luxor's Sales Specialist:</label>
         </div>
 
         <!-- Learn how -->
         <div class="col-12">
-          <label for="learnHow" class="form-label"
+          <label for="learnHow" class="form-label required"
             >How did you learn about us?</label
           >
           <select
@@ -122,7 +136,7 @@
         </div>
         <!-- Material Selection -->
         <div class="col-md-6">
-          <label for="material" class="form-label"
+          <label for="material" class="form-label required"
             >Your Material Selection...</label
           >
           <select id="material" name="material" class="form-select" required>
@@ -137,7 +151,9 @@
         </div>
         <!-- Color Choice -->
         <div class="col-md-6">
-          <label for="color" class="form-label"> Your Color Choice</label>
+          <label for="color" class="form-label required">
+            Your Color Choice</label
+          >
           <select id="color" name="color" class="form-select" required>
             <option selected value="">Choose one ...</option>
             <option value="Shades of White">Shades of White</option>
@@ -230,7 +246,7 @@
         </div>
         <!-- Edge Type -->
         <div class="col-12">
-          <label for="edge" class="form-label"> Edge Type</label>
+          <label for="edge" class="form-label required"> Edge Type</label>
           <select id="edge" name="edge-type" class="form-select" required>
             <option selected value="">Choose one ...</option>
             <option value="Erased">Erased</option>
@@ -313,65 +329,31 @@
               </svg>
             </div>
           </div>
-          <!-- Corner -->
-          <div class="col-12 input-container">
-            <input type="text" name="corner" id="corner" required />
-            <label for="corner">Corner</label>
-          </div>
+        </div>
+        <!-- Corner -->
+        <div class="col-12 input-container">
+          <input type="text" name="corner" id="corner" required />
+          <label for="corner" class="required">Corner</label>
+        </div>
 
-          <!-- Tear Out Check -->
-          <div class="col-12">
-            <div class="form-check">
-              <label class="form-check-label" for="tearCheck">
-                <span>Do you want us to tear </span> <br />
-                <span> out your old countertop.</span></label
-              >
-              <div class="yes">
-                <div>Yes</div>
-                <div class="cbx"></div>
-                <input
-                  type="checkbox"
-                  name="teardown"
-                  id="tearYes"
-                  onClick="showHiddenFields('tearYes', 'tearText')"
-                  value="yes"
-                />
-                <label for="cbxYes"></label>
-                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
-                  <path d="M2 8.36364L6.23077 12L13 2"></path>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                  <defs>
-                    <filter id="goo">
-                      <fegaussianblur
-                        in="SourceGraphic"
-                        stddeviation="4"
-                        result="blur"
-                      ></fegaussianblur>
-                      <fecolormatrix
-                        in="blur"
-                        mode="matrix"
-                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
-                        result="goo"
-                      ></fecolormatrix>
-                      <feblend in="SourceGraphic" in2="goo"></feblend>
-                    </filter>
-                  </defs>
-                </svg>
-              </div>
-
-              <div class="no">
-                <div>No</div>
-                <div class="cbx" />
-              </div>
+        <!-- Tear Out Check -->
+        <div class="col-12">
+          <div class="form-check">
+            <label class="form-check-label" for="tearCheck">
+              <span>Do you want us to tear </span> <br />
+              <span> out your old countertop.</span></label
+            >
+            <div class="yes">
+              <div>Yes</div>
+              <div class="cbx"></div>
               <input
                 type="checkbox"
-                name="no-teardown"
-                id="tearNo"
-                onClick="showHiddenFields('tearNo', 'tearText')"
-                value="no"
+                name="teardown"
+                id="tearYes"
+                onClick="showHiddenFields('tearYes', 'tearText')"
+                value="yes"
               />
-              <label for="cbx"></label>
+              <label for="cbxYes"></label>
               <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
                 <path d="M2 8.36364L6.23077 12L13 2"></path>
               </svg>
@@ -394,123 +376,159 @@
                 </defs>
               </svg>
             </div>
-          </div>
-          <div id="tearText" style="display: none">
-            <br />
-            What Type?
-            <select
-              id="tearType"
-              name="surface-type"
-              class="form-select"
-              required
-            >
-              <option value="Solid Surface">Solid Surface</option>
-              <option value="Wooden Material">Wooden Material</option>
-            </select>
-          </div>
 
-          <!-- Backsplash-->
-          <div class="col-md-6 col-12">
-            <label for="backsplash" class="form-label"> Backsplash</label>
-            <select
-              id="backsplash"
-              name="backsplash"
-              class="form-select"
-              required
-            >
-              <option selected value="">Choose one ...</option>
-              <option selected value="No Backsplash">No Backsplash</option>
-              <option value="4 Inches">4" Standard</option>
-              <option value="6 Inches">6" High Profile</option>
-              <option value="Full">Full backsplash</option>
-            </select>
-          </div>
-          <!-- Stove Type -->
-          <div class="col-md-6 col-12">
-            <label for="stoveType" class="form-label"> Stove Type</label>
-            <select
-              id="stoveType"
-              name="stove-type"
-              class="form-select input-container"
-              required
-            >
-              <option selected>Choose one ...</option>
-              <option>Range not cut out</option>
-              <option>Cooktop Cut-out</option>
-            </select>
-          </div>
-          <!--Area-->
-          <div class="col-12 input-container">
-            <input type="number" name="area" id="area" required />
-            <label for="area">Estimated Square Feet</label>
-          </div>
-          <!-- Cabinets Check -->
-          <div class="col-12">
-            <label for="“cabinets”" class="form-label"
-              >Cabinets Installed?
-            </label>
-            <select
-              id="cabinets"
-              name="cabinets"
-              class="form-select input-container"
-              required
-              onchange="showHiddenFields('cabinets','otherBoxTwo','New')"
-            >
-              <option selected value="">Choose one ...</option>
-              <option selected value="Existing">Existing</option>
-              <option value="New">New</option>
-            </select>
-            <div id="otherBoxTwo" style="display: none">
-              Cabinets' State?
-              <br />
-              <select
-                id="install"
-                name="cabinets-state"
-                onchange="showHiddenFields('install','otherBoxThree', true)"
-                class="form-select input-container"
-                required”
-              >
-                <option selected value="">Choose one ...</option>
-                <option class="cabinets" value="Already Installed">
-                  Already Installed
-                </option>
-                <option class="cabinets" value="To be installed">
-                  To be installed
-                </option>
-              </select>
+            <div class="no">
+              <div>No</div>
+              <div class="cbx" />
             </div>
-
-            <div id="otherBoxThree" class="mb-3" style="display: none">
-              Date of Installation:
-              <br />
-              <input name="cabinets-date" type="date" />
-              <br />
-            </div>
+            <input
+              type="checkbox"
+              name="no-teardown"
+              id="tearNo"
+              onClick="showHiddenFields('tearNo', 'tearText')"
+              value="no"
+            />
+            <label for="cbx"></label>
+            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+              <path d="M2 8.36364L6.23077 12L13 2"></path>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <defs>
+                <filter id="goo">
+                  <fegaussianblur
+                    in="SourceGraphic"
+                    stddeviation="4"
+                    result="blur"
+                  ></fegaussianblur>
+                  <fecolormatrix
+                    in="blur"
+                    mode="matrix"
+                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                    result="goo"
+                  ></fecolormatrix>
+                  <feblend in="SourceGraphic" in2="goo"></feblend>
+                </filter>
+              </defs>
+            </svg>
           </div>
-
-          <!--Cost-->
-          <div class="col-12 input-container">
-            <input type="number" name="price" id="price" required />
-            <label for="price">Estimated Cost $</label>
-          </div>
-          <!-- Additional Details -->
-          <div class="col-12">
-            <label for="details" class="form-label"
-              >Additional Project Details</label
-            >
-            <textarea
-              class="form-control"
-              name="additional-details"
-              aria-label="With textarea"
-            ></textarea>
-          </div>
-
-          <!-- Submit Button -->
-          <div class="col-12 d-flex justify-content-center">
-            <button type="submit" class="btn button-1">Submit</button>
-          </div>
-          <!-- /lc-block -->
         </div>
+        <div id="tearText" style="display: none">
+          <br />
+          What Type?
+          <select
+            id="tearType"
+            name="surface-type"
+            class="form-select"
+            required
+          >
+            <option value="Solid Surface">Solid Surface</option>
+            <option value="Wooden Material">Wooden Material</option>
+          </select>
+        </div>
+
+        <!-- Backsplash-->
+        <div class="col-md-6 col-12">
+          <label for="backsplash" class="form-label required">
+            Backsplash</label
+          >
+          <select
+            id="backsplash"
+            name="backsplash"
+            class="form-select"
+            required
+          >
+            <option selected value="">Choose one ...</option>
+            <option selected value="No Backsplash">No Backsplash</option>
+            <option value="4 Inches">4" Standard</option>
+            <option value="6 Inches">6" High Profile</option>
+            <option value="Full">Full backsplash</option>
+          </select>
+        </div>
+        <!-- Stove Type -->
+        <div class="col-md-6 col-12">
+          <label for="stoveType" class="form-label"> Stove Type</label>
+          <select
+            id="stoveType"
+            name="stove-type"
+            class="form-select input-container"
+            required
+          >
+            <option selected>Choose one ...</option>
+            <option>Range not cut out</option>
+            <option>Cooktop Cut-out</option>
+          </select>
+        </div>
+        <!--Area-->
+        <div class="col-12 input-container">
+          <input type="number" name="area" id="area" required />
+          <label for="area">Estimated Square Feet</label>
+        </div>
+        <!-- Cabinets Check -->
+        <div class="col-12">
+          <label for="“cabinets”" class="form-label"
+            >Cabinets Installed?
+          </label>
+          <select
+            id="cabinets"
+            name="cabinets"
+            class="form-select input-container"
+            required
+            onchange="showHiddenFields('cabinets','otherBoxTwo','New')"
+          >
+            <option selected value="">Choose one ...</option>
+            <option selected value="Existing">Existing</option>
+            <option value="New">New</option>
+          </select>
+          <div id="otherBoxTwo" style="display: none">
+            Cabinets' State?
+            <br />
+            <select
+              id="install"
+              name="cabinets-state"
+              onchange="showHiddenFields('install','otherBoxThree', true)"
+              class="form-select input-container"
+              required”
+            >
+              <option selected value="">Choose one ...</option>
+              <option class="cabinets" value="Already Installed">
+                Already Installed
+              </option>
+              <option class="cabinets" value="To be installed">
+                To be installed
+              </option>
+            </select>
+          </div>
+
+          <div id="otherBoxThree" class="mb-3" style="display: none">
+            Date of Installation:
+            <br />
+            <input name="cabinets-date" type="date" required />
+            <br />
+          </div>
+        </div>
+
+        <!--Cost-->
+        <div class="col-12 input-container">
+          <input type="number" name="price" id="price" required />
+          <label for="price">Estimated Cost $</label>
+        </div>
+        <!-- Additional Details -->
+        <div class="col-12">
+          <label for="details" class="form-label"
+            >Additional Project Details</label
+          >
+          <textarea
+            class="form-control"
+            name="additional-details"
+            aria-label="With textarea"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-12 d-flex justify-content-center">
+          <button type="submit" class="btn button-1">Submit</button>
+        </div>
+        <!-- /lc-block -->
       </form>
     </div>
   </body>
