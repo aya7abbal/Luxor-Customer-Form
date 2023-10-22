@@ -26,6 +26,3 @@ function toggleAttr(element) {
     element.setAttribute("sinkOff", true);
   }
 }
-
-
-// Zip Code Autofill

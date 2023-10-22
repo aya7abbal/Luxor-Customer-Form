@@ -8,7 +8,7 @@ function showHiddenFields(id, actionId, textCheck = null, select = true) {
         action.style.display = "block";
       } else {
         action.style.display = "none";
-      }
+      }clear
     case false:
       toggleAttr(element);
       if (element.hasAttribute("sinkOff")) {
@@ -26,6 +26,3 @@ function toggleAttr(element) {
     element.setAttribute("sinkOff", true);
   }
 }
-
-
-// Zip Code Autofill

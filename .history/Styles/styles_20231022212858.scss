@@ -44,7 +44,8 @@ form {
     background-color: transparent;
   }
 }
-.required:after {
+
+.form-group.required .control-label:after {
   content:"*";
   color:red;
 }

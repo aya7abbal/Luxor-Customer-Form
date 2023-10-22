@@ -13,6 +13,10 @@
   }
 }
 
+form .zip-wrap {
+  display: block !important;
+}
+
 body {
   margin-top: 2rem;
   background-image: url(../Images/design4.jpg);
@@ -43,10 +47,6 @@ form {
     background: transparent;
     background-color: transparent;
   }
-}
-.required:after {
-  content:"*";
-  color:red;
 }
 
 // check box
@@ -213,7 +213,7 @@ form {
   left: 25px;
   font-size: 16px;
   color: black;
-  // pointer-event: none;
+  pointer-event: none;
   transition: all 0.5s ease-in-out;
 }
 .input-container input {
@@ -239,5 +239,3 @@ form {
   border-radius: 5px;
   color: white;
 }
-
-

@@ -8,7 +8,7 @@ function showHiddenFields(id, actionId, textCheck = null, select = true) {
         action.style.display = "block";
       } else {
         action.style.display = "none";
-      }
+      }clear
     case false:
       toggleAttr(element);
       if (element.hasAttribute("sinkOff")) {
@@ -29,3 +29,14 @@ function toggleAttr(element) {
 
 
 // Zip Code Autofill
+$(".fancy-form div > div").hide();
+$("#zip").keyup(function() {
+  var el = $(this);
+
+  if ((el.val().length == 5) && (is_int(el.val()))) {
+   
+    // Make Ajax call, etc
+ 
+  }
+
+}
