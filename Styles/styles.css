@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext");
+.btn-submit {
+  width: 200px;
+  padding: 0.7rem;
+  background-color: #050839;
+  color: white;
+}
+
+.logo {
+  width: 600px;
+}
+
+@media (max-width: 769px) {
+  .logo {
+    width: 300px;
+  }
+}
+
+body {
+  margin-top: 2rem;
+  background-image: url(../Images/design4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+form input[type="date"]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+
+form input[type="date"]:focus::-webkit-datetime-edit {
+  color: black !important;
+}
+
+form input[type="time"]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+
+form input[type="time"]:focus::-webkit-datetime-edit {
+  color: black !important;
+}
+
+form .form-select,
+form input {
+  border: 0.5px solid black;
+  border-radius: 5px;
+  background: transparent;
+  background-color: transparent;
+}
+
+.form-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 350px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px !important;
+}
+
+.yes, .no {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cbx, .no, .yes {
+  position: relative;
+}
+
+.cbx *, .no *, .yes * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cbx input[type="checkbox"], .no input[type="checkbox"], .yes input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  margin: 0;
+}
+
+.cbx input[type="checkbox"]:focus, .no input[type="checkbox"]:focus, .yes input[type="checkbox"]:focus {
+  outline: 0;
+}
+
+.cbx input, .no input, .yes input {
+  position: absolute;
+  top: 0px;
+  left: 35px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid black;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.cbx input:hover, .no input:hover, .yes input:hover {
+  border-color: #aaaaac;
+}
+
+.cbx label, .no label, .yes label {
+  width: 24px;
+  height: 24px;
+  background: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 35px;
+  -webkit-filter: url(#goo);
+  filter: url(#goo);
+  -webkit-transform: trasnlate3d(0, 0, 0);
+          transform: trasnlate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+.cbx svg, .no svg, .yes svg {
+  position: absolute;
+  top: 5px;
+  left: 39px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cbx path, .no path, .yes path {
+  stroke: white;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 19;
+  stroke-dashoffset: 19;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.cbx input:checked + label, .no input:checked + label, .yes input:checked + label {
+  -webkit-animation: splash 0.6s ease forwards;
+          animation: splash 0.6s ease forwards;
+}
+
+.cbx input:checked + label + svg path, .no input:checked + label + svg path, .yes input:checked + label + svg path {
+  stroke-dashoffset: 0;
+}
+
+@-webkit-keyframes splash {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background: #55b0e8;
+    -webkit-box-shadow: 0 -18px 0 -8px #55b0e8, 16px -8px 0 -8px #55b0e8, 16px 8px 0 -8px #55b0e8, 0 18px 0 -8px #55b0e8, -16px 8px 0 -8px #55b0e8, -16px -8px 0 -8px #55b0e8;
+            box-shadow: 0 -18px 0 -8px #55b0e8, 16px -8px 0 -8px #55b0e8, 16px 8px 0 -8px #55b0e8, 0 18px 0 -8px #55b0e8, -16px 8px 0 -8px #55b0e8, -16px -8px 0 -8px #55b0e8;
+  }
+  100% {
+    background: #55b0e8;
+    -webkit-box-shadow: 0 -32px 0 -10px transparent, 28px -16px 0 -10px transparent, 28px 16px 0 -10px transparent, 0 32px 0 -10px transparent, -28px 16px 0 -10px transparent, -28px -16px 0 -10px transparent;
+            box-shadow: 0 -32px 0 -10px transparent, 28px -16px 0 -10px transparent, 28px 16px 0 -10px transparent, 0 32px 0 -10px transparent, -28px 16px 0 -10px transparent, -28px -16px 0 -10px transparent;
+  }
+}
+
+@keyframes splash {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background: #55b0e8;
+    -webkit-box-shadow: 0 -18px 0 -8px #55b0e8, 16px -8px 0 -8px #55b0e8, 16px 8px 0 -8px #55b0e8, 0 18px 0 -8px #55b0e8, -16px 8px 0 -8px #55b0e8, -16px -8px 0 -8px #55b0e8;
+            box-shadow: 0 -18px 0 -8px #55b0e8, 16px -8px 0 -8px #55b0e8, 16px 8px 0 -8px #55b0e8, 0 18px 0 -8px #55b0e8, -16px 8px 0 -8px #55b0e8, -16px -8px 0 -8px #55b0e8;
+  }
+  100% {
+    background: #55b0e8;
+    -webkit-box-shadow: 0 -32px 0 -10px transparent, 28px -16px 0 -10px transparent, 28px 16px 0 -10px transparent, 0 32px 0 -10px transparent, -28px 16px 0 -10px transparent, -28px -16px 0 -10px transparent;
+            box-shadow: 0 -32px 0 -10px transparent, 28px -16px 0 -10px transparent, 28px 16px 0 -10px transparent, 0 32px 0 -10px transparent, -28px 16px 0 -10px transparent, -28px -16px 0 -10px transparent;
+  }
+}
+
+/* CSS */
+.button-1 {
+  background-color: #050839;
+  border-radius: 8px;
+  border-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 20px;
+  outline: none;
+  padding: 10px 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: color 100ms;
+  transition: color 100ms;
+  vertical-align: baseline;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #55b0e8;
+  color: white;
+}
+
+.box {
+  position: absolute;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-container label {
+  position: absolute;
+  top: 8px;
+  left: 25px;
+  font-size: 16px;
+  color: black;
+  pointer-event: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.input-container input {
+  border-bottom: 1px solid #555;
+  background: transparent;
+  width: 100%;
+  padding: 8px 5px;
+  font-size: 16px;
+  color: black;
+}
+
+.input-container input:focus {
+  outline: none;
+  border-bottom: 3px solid #55b0e8;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+  top: -14px;
+  font-size: 12px;
+  background-color: #55b0e8;
+  padding: 2px 15px;
+  border-radius: 5px;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */

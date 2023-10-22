@@ -1,0 +1,219 @@
+.btn-submit {
+  width: 200px;
+  padding: 0.7rem;
+  background-color: #050839;
+  color: white;
+}
+.logo {
+  width: 600px;
+}
+@media (max-width: 769px) {
+  .logo {
+    width: 300px;
+  }
+}
+
+body {
+  margin-top: 2rem;
+  background-image: url(../Images/design4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+form {
+  background-color: rgba($color: #fff, $alpha: 0.4);
+  // Date and Time Input Remove Place Holder
+  input[type="date"]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+  }
+  input[type="date"]:focus::-webkit-datetime-edit {
+    color: black !important;
+  }
+  input[type="time"]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+  }
+  input[type="time"]:focus::-webkit-datetime-edit {
+    color: black !important;
+  }
+
+  .form-select, input{
+      // border:none;
+      border: .5px solid black;
+      border-radius: 5PX;
+      background: transparent;
+      background-color: transparent;
+  }
+
+}
+
+// check box
+
+.form-check{position: relative;}
+.form-check-label{
+  margin: 0px 20px;
+}
+.cbx{
+  $primary:#55b0e8;
+  
+*{
+  box-sizing: border-box;}
+  
+input[type="checkbox"]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  margin: 0;
+  &:focus{
+    outline: 0;}}
+
+.cbx{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  // top: 0;
+  // left: 0}
+
+  input{
+    position: absolute;
+    // top: 0;
+    // left: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid black;
+    border-radius: 50%;
+    transition: all .2s ease;
+    &:hover{
+      border-color: darken(#bfbfc0,8%);}}
+  
+  label{
+    width: 24px;
+    height: 24px;
+    background: none;
+    border-radius: 50%;
+    position: absolute;
+    // top: 0;
+    // left: 0;
+    -webkit-filter: url(#goo);
+    filter: url(#goo);
+    transform: trasnlate3d(0,0,0);
+    pointer-events: none;}
+    
+  svg{
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    z-index: 1;
+    pointer-events: none;}
+    path{
+      stroke: white;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 19;
+      stroke-dashoffset: 19;
+      transition: all .4s ease;}
+
+  input:checked
+    + label{
+      animation: splash .6s ease forwards;
+      + svg path{
+        stroke-dashoffset: 0;}}
+       
+@keyframes splash{
+0%{
+    transform: scale(1.1);}
+40%{
+    transform: scale(1);
+    background: $primary;
+    box-shadow: 0 -18px 0 -8px $primary, 16px -8px 0 -8px $primary, 16px 8px 0 -8px $primary, 0 18px 0 -8px $primary, -16px 8px 0 -8px $primary, -16px -8px 0 -8px $primary;}
+  100%{
+    background: $primary;
+    box-shadow: 0 -32px 0 -10px transparent, 28px -16px 0 -10px transparent, 28px 16px 0 -10px transparent, 0 32px 0 -10px transparent, -28px 16px 0 -10px transparent, -28px -16px 0 -10px transparent;}}
+  
+  
+
+}
+// Submit Button
+/* CSS */
+.button-1 {
+  background-color: #050839;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 20px;
+  outline: none;
+  padding: 10px 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #55b0e8;
+  color: white;
+}
+
+
+
+
+// Input Animation
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext");
+.box {
+    position: absolute;
+  }
+  
+.input-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-container label {
+  position: absolute;
+  top: 8px;
+  left: 25px;
+  font-size: 16px;
+  color: black;
+  pointer-event: none;
+  transition: all 0.5s ease-in-out;
+}
+.input-container input {
+  // border: 0;
+  border-bottom: 1px solid #555;
+  background: transparent;
+  width: 100%;
+  padding: 8px 5px;
+  font-size: 16px;
+  color: black;
+}
+.input-container input:focus {
+  // border: none;
+  outline: none;
+  border-bottom: 3px solid #55b0e8;
+}
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+  top: -14px;
+  font-size: 12px;
+  background-color: #55b0e8;
+  padding: 2px 15px;
+  border-radius: 5px;
+  color: white;
+}

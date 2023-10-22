@@ -1,0 +1,139 @@
+.btn-submit {
+    width: 200px;
+    padding: .7rem;
+    background-color: #050839;
+    color: white
+    ;
+    
+}
+.logo{
+    width: 600px;
+}
+@media (max-width:769px) {
+    .logo{
+        width: 400px;
+    }
+    
+}
+
+body{
+    margin-top: 2rem;
+    background-image: url(../Images/design4.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+ 
+    
+}
+form{
+    background-color:rgba($color: #FFF, $alpha: 0.4);
+
+}
+
+
+
+/* CSS */
+.button-1 {
+  background-color: #050839;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 20px;
+  outline: none;
+  padding: 10px 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: white;
+  color: #050839;
+}
+
+
+
+
+
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+  --color-light: white;
+  --color-dark: #050839;
+  --color-signal: #55b0e8;
+  
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-accent: var(--color-signal);
+  
+  --size-bezel: .5rem;
+  --size-radius: 4px;
+  
+  line-height: 1.4;
+  
+  font-family: 'Inter', sans-serif;
+  font-size: calc(.6rem + .4vw);
+  color: var(--color-text);
+  background: var(--color-background);
+  font-weight: 300;
+  padding: 0 calc(var(--size-bezel) * 3);
+}
+
+
+mark {
+  background: var(--color-accent);
+  color: var(--color-text);
+  font-weight: bold;
+  padding: 0 0.2em;
+}
+
+
+.input {
+  position: relative;
+  
+  &__label {
+    position: absolute;
+    left: 10px;
+    top: 2px;
+    // padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+    margin: calc(var(--size-bezel) * 0.75 + 4px) calc(var(--size-bezel) * .5);
+    // background: pink;
+    white-space: nowrap;
+    // transform: translate(0, 0);
+    // transform-origin: 0 0;
+    background: var(--color-background);
+    // transition: transform 120ms ease-in;
+    // font-weight: bold;
+    // line-height: 1.2;
+  }
+  &__field {
+  
+    padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+    background: transparent;
+    border-radius: var(--size-radius);
+    
+    &:focus,
+    &:not(:placeholder-shown) {
+      & + .input__label {
+        transform: translate(.25rem, -65%) scale(.9);
+        color: var(--color-accent);
+      }
+    }
+  }
+}
+
+

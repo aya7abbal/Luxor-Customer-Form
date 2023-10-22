@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./Styles/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body class="p-3">
+    <div class="container">
+      <div class="row py-4 py-lg-6">
+        <div class="col-lg-12 d-flex align-items-center justify-content-center">
+          <div style="z-index: 1" class="lc-block mb-n3 mb-lg-0">
+            <img
+              class="img-fluid p-3 m-3 mb-5 logo"
+              src="./Images/logo.svg"
+              alt="Luxor Stone Group Logo"
+              
+            />
+          </div>
+          <!-- /lc-block -->
+        </div>
+        <!-- /col -->
+
+        <div class="d-flex-col text-center">
+          <h1>Customer Welcome Sheet</h1>
+
+          <p class="lead">(Please Fill in The Form)</p>
+        </div>
+        <!-- /lc-block -->
+      </div>
+    </div>
+
+    <form class="row g-3 shadow p-3 mx-4 mx-md-5">
+      <!-- Date -->
+      <div class="col-md-6 col-12">
+        <label for="date" class="form-label">Today's Date</label>
+        <input type="date" class="form-control" id="date" />
+      </div>
+
+     
+      <!-- Time -->
+      <div class="col-md-6 col-12">
+        <label for="aptTime" class="form-label">Appointment Time</label>
+        <input type="time" class="form-control" id="aptTime" />
+      </div>
+      <!-- Name -->
+      <div class="col-12 col-md-6">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Your Name Here"
+        />
+      </div>
+      <!-- Address -->
+      <div class="col-12 col-md-6">
+        <label for="address" class="form-label">Address</label>
+        <input
+          type="text"
+          class="form-control"
+          id="address"
+          placeholder="Enter your Address here"
+        />
+      </div>
+      <!-- Cont. Ref. -->
+      <div class="col-12">
+        <label for="contRef" class="form-label">Cont. Ref.</label>
+        <input
+          type="text"
+          class="form-control"
+          id="contRef"
+          placeholder="Apartment, studio, or floor"
+        />
+      </div>
+      <!-- Phone Number -->
+      <div class="col-md-6 col-12">
+        <label for="mobile" class="form-label">Phone Number</label>
+        <input type="number" class="form-control" id="mobile" />
+      </div>
+      <!-- Email -->
+      <div class="col-md-6 col-12">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" />
+      </div>
+      <!-- Learn 
+    how -->
+      <div class="col-12">
+        <label for="learnHow" class="form-label"
+          >How did you learn about us?</label
+        >
+        <select id="learnHow" class="form-select">
+          <option selected>Choose..</option>
+          <option>answer 2</option>
+        </select>
+      </div>
+      <!-- Material Selection -->
+      <div class="col-md-6">
+        <label for="material" class="form-label"
+          >Your Material Selection...</label
+        >
+        <select id="material" class="form-select">
+          <option selected>Choose..</option>
+          <option>answer 2</option>
+        </select>
+      </div>
+      <!-- Color Choice -->
+      <div class="col-md-6">
+        <label for="color" class="form-label"> Your Color Choice</label>
+        <select id="color" class="form-select">
+          <option selected>Choose..</option>
+          <option>answer 2</option>
+        </select>
+      </div>
+      <!-- Sink Check -->
+      <div class="col-12">
+        <div class="form-check">
+          <label class="form-check-label" for="sinkCheck">
+            Do you have a sink?</label
+          >
+          <input class="form-check-input" type="checkbox" id="sinkCheck" />
+        </div>
+      </div>
+      <!-- Edge Type -->
+      <div class="col-12">
+        <label for="edge" class="form-label"> Edge Type</label>
+        <select id="edge" class="form-select">
+          <option selected>Choose..</option>
+          <option>answer 2</option>
+        </select>
+      </div>
+      <!-- Faucet Check -->
+      <div class="col-12">
+        <div class="form-check">
+          <label class="form-check-label" for="sinkCheck">
+            Do you have a Faucet?</label
+          >
+          <input class="form-check-input" type="checkbox" id="sinkCheck" />
+        </div>
+      </div>
+      <!-- Corner -->
+      <div class="col-12">
+        <label for="corner" class="form-label">Corner</label>
+        <input
+          type="text"
+          class="form-control"
+          id="corner"
+          placeholder="Type of corner"
+        />
+      </div>
+
+      <!-- Tear Out Check -->
+      <div class="col-12">
+        <div class="form-check">
+          <label class="form-check-label" for="tearCheck">
+            Do you have a Tear Out?</label
+          >
+          <input class="form-check-input" type="checkbox" id="tearCheck" />
+        </div>
+      </div>
+
+      <!-- Tear Out Type -->
+      <div class="col-12">
+        <label for="tearMaterial" class="form-label">Tear Out Material</label>
+        <input
+          type="text"
+          class="form-control"
+          id="tearMaterial"
+          placeholder="Material of Tear Out"
+        />
+      </div>
+
+      <!-- Backsplash-->
+      <div class="col-md-6 col-12">
+        <label for="backsplash" class="form-label"> Backsplash</label>
+        <select id="backsplash" class="form-select">
+          <option selected>None</option>
+          <option>4"</option>
+          <option>6"</option>
+          <option>Full</option>
+        </select>
+      </div>
+      <!-- Stove Type -->
+      <div class="col-md-6 col-12">
+        <label for="stoveType" class="form-label"> Stove Type</label>
+        <select id="stoveType" class="form-select">
+          <option selected>Range</option>
+          <option>Cook Top</option>
+        </select>
+      </div>
+      <!--Area-->
+      <div class="col-12">
+        <label for="area" class="form-label">Estimated Square Feet</label>
+        <input type="number" class="form-control" id="area" />
+      </div>
+      <!-- Tear Out Check -->
+      <div class="col-12">
+        <div class="form-check">
+          <label class="form-check-label" for="cabinets">
+            Cabinets Installed?</label
+          >
+          <input class="form-check-input" type="checkbox" id="cabinets" />
+        </div>
+      </div>
+      <!--Cost-->
+      <div class="col-12">
+        <label for="price" class="form-label">Estimated Cost $</label>
+        <input type="number" class="form-control" id="price" />
+      </div>
+      <!-- Additional Details -->
+      <div class="col-12">
+        <label for="details" class="form-label"
+          >Additional Project Details</label
+        >
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="col-12 d-flex justify-content-center">
+        <button type="submit" class="btn button-1">Submit</button>
+      </div>
+      <!-- /lc-block -->
+    </form>
+  </body>
+</html>

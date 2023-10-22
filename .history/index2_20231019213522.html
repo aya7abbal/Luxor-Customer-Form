@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .form-step {
+            display: block;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <form id="review-form">
+        <div class="form-step">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="form-step">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="form-step">
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating">
+        </div>
+        <!-- Add more fields as needed -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const formSteps = document.querySelectorAll(".form-step");
+
+        formSteps.forEach((step, index) => {
+            const input = step.querySelector('input');
+
+            input.addEventListener('input', (event) => {
+                if (event.target.value) {
+                    // If the input is not empty, focus on the next step's input
+                    if (formSteps[index + 1]) {
+                        formSteps[index + 1].querySelector('input').focus();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
