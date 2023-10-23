@@ -114,21 +114,21 @@ document
     checkForInput();
 
     // these IDs from the previous steps
-    //   emailjs.sendForm("service_9y1ve0g", "template_h7enjtb", this).then(
-    //     function () {
-    //       toastr.success(
-    //         "Thank you for filling out the form, your Data has been saved!",
-    //         "Success",
-    //         {
-    //           positionClass: "toast-top-right",
-    //           // backgroundColor: "#ff0000",
-    //         }
-    //       );
-    //     },
-    //     function (error) {
-    //       toastr.error("Something went wrong!", "Error", {
-    //         positionClass: "toast-top-right",
-    //       });
-    //     }
-    //   );
+    emailjs.sendForm("service_9y1ve0g", "template_h7enjtb", this).then(
+      function () {
+        toastr.success(
+          "Thank you for filling out the form, your Data has been saved!",
+          "Success",
+          {
+            positionClass: "toast-top-right",
+            // backgroundColor: "#ff0000",
+          }
+        );
+      },
+      function (error) {
+        toastr.error("Something went wrong!", "Error", {
+          positionClass: "toast-top-right",
+        });
+      }
+    );
   });
