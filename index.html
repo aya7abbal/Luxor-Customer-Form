@@ -101,13 +101,14 @@
         </div>
 
         <!-- Sales Consultant -->
-        <div class="col-12 input-container">
+        <div class="col-12 ">
 
           <label for="cons" class="required">Luxor's Sales Specialist:</label>
+          
           <select id="cons" name="specialist" class="form-select" required>
             <option selected value="">Choose one ...</option>
-            <option selected value="Amr Talaat">Amr Talaat</option>
-            <option selected value="Tristen Dwumah">Tristen Dwumah</option>
+            <option  value="Amr Talaat">Amr Talaat</option>
+            <option  value="Tristen Dwumah">Tristen Dwumah</option>
             
           </select>
         </div>
@@ -417,23 +418,24 @@
               </defs>
             </svg>
           </div>
+          <div id="tearText" style="display: none">
+            <br />
+            What Type?
+            <select
+              id="tearType"
+              name="surface-type"
+              class="form-select"
+              required
+            >
+              <option value="Solid Surface">Solid Surface</option>
+              <option value="Wooden Material">Wooden Material</option>
+            </select>
+          </div>
         </div>
-        <div id="tearText" style="display: none">
-          <br />
-          What Type?
-          <select
-            id="tearType"
-            name="surface-type"
-            class="form-select"
-            required
-          >
-            <option value="Solid Surface">Solid Surface</option>
-            <option value="Wooden Material">Wooden Material</option>
-          </select>
-        </div>
+      
 
         <!-- Backsplash-->
-        <div class="col-md-6 col-12 mt-4">
+        <div class="col-12 mt-4">
           <label for="backsplash" class="form-label required">
             Backsplash</label
           >
@@ -451,7 +453,7 @@
           </select>
         </div>
         <!-- Stove Type -->
-        <div class="col-md-6 col-12">
+        <div class=" col-12">
           <label for="stoveType" class="form-label"> Stove Type</label>
           <select
             id="stoveType"
