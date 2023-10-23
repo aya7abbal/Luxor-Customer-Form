@@ -132,3 +132,18 @@ document
       }
     );
   });
+
+  // Not to make them all required.
+
+  document.querySelectorAll(".valid").forEach(function(inputElement) {
+    inputElement.addEventListener("input", function() {
+      const label = this.nextElementSibling;
+      if (this.value.trim() !== "") {
+        label.classList.add("filled");
+      } else {
+        label.classList.remove("filled");
+      }
+    });
+  });
+  
+  

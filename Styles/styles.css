@@ -242,10 +242,6 @@ form input {
   color: white;
 }
 
-.box {
-  position: absolute;
-}
-
 .input-container {
   position: relative;
   margin-bottom: 25px;
@@ -257,7 +253,6 @@ form input {
   left: 25px;
   font-size: 16px;
   color: black;
-  pointer-event: none;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -276,8 +271,21 @@ form input {
   border-bottom: 3px solid #55b0e8;
 }
 
-.input-container input:focus ~ label,
-.input-container input:valid ~ label {
+.input-container input:focus ~ label {
+  top: -14px;
+  font-size: 12px;
+  background-color: #55b0e8;
+  padding: 2px 15px;
+  border-radius: 5px;
+  color: white;
+}
+
+.input-container label {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.input-container label.filled {
   top: -14px;
   font-size: 12px;
   background-color: #55b0e8;
