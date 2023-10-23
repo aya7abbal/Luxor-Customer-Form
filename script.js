@@ -71,6 +71,35 @@ const checkForSelected = () => {
   });
 };
 
+const checkForInput = () => {
+  const inputIds = [
+    "date",
+    "aptTime",
+    "clientName",
+    "email",
+    "address",
+    "city",
+    "zipcode",
+    "state",
+    "mobile",
+    "cons",
+    "learnHow",
+    "material",
+    "color",
+    "edge",
+    "corner",
+    "backsplash",
+  ];
+  inputIds.forEach(function (id, index) {
+    if (document.getElementById(id).value === "") {
+      toastr.error(`Please fill field ${id}`, "Error", {
+        positionClass: "toast-top-right",
+        backgroundColor: "#ff0000",
+      });
+      return;
+    }
+  });
+};
 // ----------------------------------- Add Email Js Details ------------------------------------------- //
 
 (function () {
@@ -82,34 +111,24 @@ document
   .addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // if (
-    //   nameInput.value === "" ||
-    //   emailInput.value === "" ||
-    //   messageInput.value === ""
-    // ) {
-    //   toastr.error("Please fill in all required fields.", "Error", {
-    //     positionClass: "toast-top-right",
-    //     backgroundColor: "#ff0000",
-    //   });
-    //   return;
-    // }
+    checkForInput();
 
     // these IDs from the previous steps
-    emailjs.sendForm("service_9y1ve0g", "template_h7enjtb", this).then(
-      function () {
-        toastr.success(
-          "Thank you for filling out the form, your Data has been saved!",
-          "Success",
-          {
-            positionClass: "toast-top-right",
-            // backgroundColor: "#ff0000",
-          }
-        );
-      },
-      function (error) {
-        toastr.error("Something went wrong!", "Error", {
-          positionClass: "toast-top-right",
-        });
-      }
-    );
+    //   emailjs.sendForm("service_9y1ve0g", "template_h7enjtb", this).then(
+    //     function () {
+    //       toastr.success(
+    //         "Thank you for filling out the form, your Data has been saved!",
+    //         "Success",
+    //         {
+    //           positionClass: "toast-top-right",
+    //           // backgroundColor: "#ff0000",
+    //         }
+    //       );
+    //     },
+    //     function (error) {
+    //       toastr.error("Something went wrong!", "Error", {
+    //         positionClass: "toast-top-right",
+    //       });
+    //     }
+    //   );
   });
