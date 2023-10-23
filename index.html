@@ -102,8 +102,14 @@
 
         <!-- Sales Consultant -->
         <div class="col-12 input-container">
-          <input type="text" name="specialist" required id="cons" />
+
           <label for="cons" class="required">Luxor's Sales Specialist:</label>
+          <select id="cons" name="specialist" class="form-select" required>
+            <option selected value="">Choose one ...</option>
+            <option selected value="Amr Talaat">Amr Talaat</option>
+            <option selected value="Tristen Dwumah">Tristen Dwumah</option>
+            
+          </select>
         </div>
 
         <!-- Learn how -->
@@ -249,9 +255,9 @@
           <label for="edge" class="form-label required"> Edge Type</label>
           <select id="edge" name="edge-type" class="form-select" required>
             <option selected value="">Choose one ...</option>
-            <option value="Erased">Erased</option>
+            <option value="Eased">Eased</option>
             <option value="Half Bull Nose">Half Bull Nose</option>
-            <option value="Fill Bull Nose">Fill Bull Nose</option>
+            <option value="Full Bull Nose">Fill Bull Nose</option>
             <option value="Erased">Quarter Bevel</option>
           </select>
         </div>
@@ -508,7 +514,7 @@
         <!--Cost-->
         <div class="col-12 input-container">
           <input type="number" name="price" id="price" />
-          <label for="price">Estimated Cost $</label>
+          <label for="price">Desired Budget $</label>
         </div>
         <!-- Additional Details -->
         <div class="col-12">
