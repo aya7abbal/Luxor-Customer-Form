@@ -50,10 +50,6 @@ form input[type="time"]:focus::-webkit-datetime-edit {
   color: black !important;
 }
 
-form #date, form #aptTime {
-  padding: 10px;
-}
-
 form .form-select,
 form input {
   border: 0.5px solid black;
