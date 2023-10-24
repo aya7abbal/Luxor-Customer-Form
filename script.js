@@ -15,8 +15,10 @@ const showHiddenFields = (id, actionId, textCheck = null, select = false) => {
           action.style.display = "block";
         } else {
           action.style.display = "none";
+          document.getElementById("otherBoxThree").style.display = "none";
         }
         break;
+        ``;
       case "otherBoxThree":
         if (element.value == "To be installed") {
           action.style.display = "block";
