@@ -80,13 +80,19 @@
             id="clientName"
             name="name"
             required
-            class="valid"
+            class="valid data-req"
           />
           <label for="name" class="required">Name</label>
         </div>
         <!--Email -->
         <div class="col-md-6 col-12 input-container">
-          <input type="email" name="email" required id="email" class="valid" />
+          <input
+            type="email"
+            name="email"
+            required
+            id="email"
+            class="valid data-req"
+          />
           <label for="email" class="required">Email</label>
         </div>
         <!-- Address -->
@@ -96,12 +102,18 @@
             name="address"
             required
             id="address"
-            class="valid"
+            class="valid data-req"
           />
           <label for="address" class="required">Address Line 1</label>
         </div>
         <div class="col-12 col-md-6 input-container">
-          <input type="text" name="city" required id="city" class="valid" />
+          <input
+            type="text"
+            name="city"
+            required
+            id="city"
+            class="valid data-req"
+          />
           <label for="city" class="required">City</label>
         </div>
         <div class="col-12 col-md-6 input-container">
@@ -110,12 +122,18 @@
             name="zipcode"
             required
             id="zipcode"
-            class="valid"
+            class="valid data-req"
           />
           <label for="zipcode" class="required">Zip Code</label>
         </div>
         <div class="col-12 col-md-6 input-container">
-          <input type="text" name="state" required id="state" class="valid" />
+          <input
+            type="text"
+            name="state"
+            required
+            id="state"
+            class="valid data-req"
+          />
           <label for="state" class="required">State</label>
         </div>
 
@@ -126,7 +144,7 @@
             name="mobile"
             id="mobile"
             required
-            class="valid"
+            class="valid data-req"
           />
           <label for="mobile" class="required">Phone Number</label>
         </div>
@@ -140,16 +158,21 @@
         <div class="col-12">
           <label for="cons" class="required">Luxor's Sales Specialist:</label>
 
-          <select id="cons" name="specialist" class="form-select" required>
+          <select
+            id="cons"
+            name="specialist"
+            class="form-select data-req"
+            required
+          >
             <option selected value="">Choose one ...</option>
-            <option value="Amr Talaat">Amr Talaat</option>
+            <option value="Alex Talaat">Amr Talaat</option>
             <option value="Tristen Dwumah">Tristen Dwumah</option>
           </select>
         </div>
 
         <!-- Learn how -->
         <div class="col-12">
-          <label for="learnHow" class="form-label required"
+          <label for="learnHow" class="form-label required data-req"
             >How did you learn about us?</label
           >
           <select
@@ -180,7 +203,12 @@
           <label for="material" class="form-label required"
             >Your Material Selection...</label
           >
-          <select id="material" name="material" class="form-select" required>
+          <select
+            id="material"
+            name="material"
+            class="form-select data-req"
+            required
+          >
             <option selected value="">Choose one ...</option>
             <option value="Granite">Granite</option>
             <option value="Quartz">Quartz</option>
@@ -195,7 +223,7 @@
           <label for="color" class="form-label required">
             Your Color Choice</label
           >
-          <select id="color" name="color" class="form-select" required>
+          <select id="color" name="color" class="form-select data-req" required>
             <option selected value="">Choose one ...</option>
             <option value="Shades of White">Shades of White</option>
             <option value="Shades of Brown">Shades of Brown</option>
@@ -209,7 +237,7 @@
         <div class="col-12">
           <div class="form-check">
             <div class="label">
-              <label class="form-check-label" for="sinkCheck">
+              <label class="form-check-label required" for="sinkCheck">
                 Do you have a sink?</label
               >
             </div>
@@ -293,9 +321,14 @@
         <!-- Edge Type -->
         <div class="col-12">
           <label for="edge" class="form-label required"> Edge Type</label>
-          <select id="edge" name="edge-type" class="form-select" required>
+          <select
+            id="edge"
+            name="edge-type"
+            class="form-select data-req"
+            required
+          >
             <option selected value="">Choose one ...</option>
-            <option value="Eased">Eased</option>
+            <option value="Eased">Eased Edge</option>
             <option value="Half Bull Nose">Half Bull Nose</option>
             <option value="Full Bull Nose">Full Bull Nose</option>
             <option value="Erased">Quarter Bevel</option>
@@ -305,7 +338,7 @@
         <div class="col-12">
           <div class="form-check">
             <div class="label">
-              <label class="form-check-label" for="sinkCheck">
+              <label class="form-check-label required" for="sinkCheck">
                 Do you have a Faucet?</label
               >
             </div>
@@ -382,14 +415,14 @@
           </div>
         </div>
         <!-- Corner -->
-        <div class="col-12">
+        <!-- <div class="col-12">
           <label for="corner" class="required">Corner</label>
         </div>
         <select
           id="corner"
           name="corner"
           required
-          class="form-select input-container valid"
+          class="form-select input-container valid data-req"
           onchange="showHiddenFields('corner','otherBoxFour','Round')"
         >
           <option selected value="">Choose one ...</option>
@@ -401,15 +434,15 @@
           <br />
           <input name="corner" type="number" class="valid" min="1" />
           <br />
-        </div>
+        </div> -->
 
         <!-- Tear Out Check -->
         <div class="col-12">
           <div class="form-check">
             <div class="label">
-              <label class="form-check-label" for="tearCheck">
-                <span>Do you want us to tear </span> <br />
-                <span> out your old countertop.</span></label
+              <label class="form-check-label required" for="tearCheck">
+                <span>Do you want us to tearout </span> <br />
+                <span> your old countertop.</span></label
               >
             </div>
             <div class="form-check-checkbox">
@@ -503,11 +536,12 @@
             <select
               id="backsplash"
               name="backsplash"
-              class="form-select"
+              class="form-select data-req"
               required
             >
               <option selected value="">Choose one ...</option>
               <option value="No Backsplash">No Backsplash</option>
+              <option value="2 Inches">2" Low Profile</option>
               <option value="4 Inches">4" Standard</option>
               <option value="6 Inches">6" High Profile</option>
               <option value="Full">Full backsplash</option>
@@ -515,11 +549,14 @@
           </div>
           <!-- Stove Type -->
           <div class="col-12 mt-3">
-            <label for="stoveType" class="form-label"> Stove Type</label>
+            <label for="stoveType" class="form-label required">
+              Stove Type</label
+            >
             <select
               id="stoveType"
               name="stove-type"
               class="form-select input-container"
+              required
             >
               <option selected>Choose one ...</option>
               <option>Range not cut out</option>
@@ -528,18 +565,19 @@
           </div>
           <!--Area-->
           <div class="col-12 input-container">
-            <input type="number" name="area" id="area" class="valid" />
-            <label for="area">Estimated Square Feet</label>
+            <input type="number" name="area" id="area" class="valid" required />
+            <label for="area" class="required">Estimated Square Feet</label>
           </div>
           <!-- Cabinets Check -->
           <div class="col-12">
-            <label for="“cabinets”" class="form-label"
+            <label for="“cabinets”" class="form-label required"
               >Cabinets Installed?
             </label>
             <select
               id="cabinets"
               name="cabinets"
               class="form-select input-container"
+              required
               onchange="showHiddenFields('cabinets','otherBoxTwo','New')"
             >
               <option selected value="">Choose one ...</option>
@@ -566,7 +604,7 @@
               </select>
             </div>
 
-            <div id="otherBoxThree" class="mb-3" style="display: none">
+            <div id="otherBoxThree" class="mb-3 data-req" style="display: none">
               Date of Installation:
               <br />
               <input name="cabinets-date" type="date" class="valid" />

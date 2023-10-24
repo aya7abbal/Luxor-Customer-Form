@@ -81,33 +81,23 @@ const checkForSelected = () => {
 };
 
 const checkForInput = () => {
-  const inputIds = [
-    "date",
-    "clientName",
-    "email",
-    "address",
-    "city",
-    "zipcode",
-    "state",
-    "mobile",
-    "cons",
-    "learnHow",
-    "material",
-    "color",
-    "edge",
-    "corner",
-    "backsplash",
-  ];
-  inputIds.forEach(function (id, index) {
-    if (document.getElementById(id).value === "") {
-      toastr.error(`Please fill field ${id}`, "Error", {
+  const inputElements = document.querySelectorAll(".data-req");
+  let isValid = true;
+
+  for (const inputElement of inputElements) {
+    if (inputElement.value === "") {
+      toastr.error(`Please fill field ${inputElement.name}`, "Error", {
         positionClass: "toast-top-right",
         backgroundColor: "#ff0000",
       });
-      return;
+      isValid = false;
+      break; // Exit the loop if an empty input is found
     }
-  });
+  }
+
+  return isValid;
 };
+
 // ----------------------------------- Add Email Js Details ------------------------------------------- //
 
 (function () {
@@ -118,40 +108,37 @@ const checkForInput = () => {
 const form = document.getElementById("customer-form");
 
 form.addEventListener("submit", function (e) {
-  console.log("here");
   e.preventDefault();
+  console.log(checkForInput());
+  if (checkForInput()) {
+    emailjs.sendForm("service_9y1ve0g", "template_h7enjtb", this).then(
+      function () {
+        toastr.success(
+          "Thank you for filling out the form, your Data has been saved!",
+          "Success",
+          {
+            positionClass: "toast-top-right",
+            // backgroundColor: "#ff0000",
+          }
+        );
 
-  checkForInput();
+        setTimeout(function () {
+          location.reload();
+        }, 1500);
 
-  // these IDs from the previous steps
-  emailjs.sendForm("service_9y1ve0g", "template_h7enjtb", this).then(
-    function () {
-      toastr.success(
-        "Thank you for filling out the form, your Data has been saved!",
-        "Success",
-        {
+        // Scroll to the top of the page
+        window.scrollTo(0, 0);
+      },
+      function (error) {
+        toastr.error("Something went wrong!", "Error", {
           positionClass: "toast-top-right",
-          // backgroundColor: "#ff0000",
-        }
-      );
-
-      setTimeout(function () {
-        location.reload();
-      }, 1500);
-      // form.reset();
-      // Scroll to the top of the page
-      window.scrollTo(0, 0);
-    },
-    function (error) {
-      toastr.error("Something went wrong!", "Error", {
-        positionClass: "toast-top-right",
-      });
-    }
-  );
+        });
+      }
+    );
+  }
 });
 
 // Not to make them all required.
-
 document.querySelectorAll(".valid").forEach(function (inputElement) {
   inputElement.addEventListener("input", function () {
     const label = this.nextElementSibling;
