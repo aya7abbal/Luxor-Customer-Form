@@ -1,3 +1,14 @@
+// Add an event listener to the button
+document.getElementById("submitButton").addEventListener("click", function () {
+  // Refresh the page
+  location.reload();
+
+  // Scroll to the top of the page
+  window.scrollTo(0, 0);
+});
+
+
+
 // When option checked, show input area
 const showHiddenFields = (id, actionId, textCheck = null, select = false) => {
   const element = document.getElementById(id);
@@ -20,6 +31,14 @@ const showHiddenFields = (id, actionId, textCheck = null, select = false) => {
           action.style.display = "none";
         }
         break;
+        case "otherBoxFour":
+          if (element.value == "Round") {
+            action.style.display = "block";
+          } if (element.value == "Sharp") {
+            action.style.display = "Block";
+          }
+          break;
+
       case "tearText":
         if (element.value == "yes") {
           toggleDisabled(action, "tearNo", "tearNo");
@@ -74,7 +93,6 @@ const checkForSelected = () => {
 const checkForInput = () => {
   const inputIds = [
     "date",
-    "aptTime",
     "clientName",
     "email",
     "address",
@@ -125,6 +143,13 @@ document
           }
         );
       },
+      // function(){
+      //    // Refresh the page
+      //    location.reload();
+
+      //    // Scroll to the top of the page
+      //    window.scrollTo(0, 0);
+      // },
       function (error) {
         toastr.error("Something went wrong!", "Error", {
           positionClass: "toast-top-right",
