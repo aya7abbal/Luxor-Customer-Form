@@ -41,6 +41,9 @@ form {
   input[type="time"]:focus::-webkit-datetime-edit {
     color: black !important;
   }
+  #date, #aptTime{
+    padding: 10px;
+  }
 
   .form-select,
   input {
@@ -72,6 +75,7 @@ form {
 }
 .form-check-checkbox{
   padding: 10px 0px;
+
 }
 
 
