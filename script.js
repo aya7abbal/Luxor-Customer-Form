@@ -11,7 +11,11 @@ const showHiddenFields = (id, actionId, textCheck = null, select = false) => {
   else {
     switch (actionId) {
       case "otherBoxTwo":
-        action.style.display = "block";
+        if (element.value === "New") {
+          action.style.display = "block";
+        } else {
+          action.style.display = "none";
+        }
         break;
       case "otherBoxThree":
         if (element.value == "To be installed") {
@@ -87,7 +91,7 @@ const checkForInput = () => {
   for (const inputElement of inputElements) {
     if (inputElement.value === "") {
       toastr.error(`Please fill field ${inputElement.name}`, "Error", {
-        positionClass: "toast-top-right",
+        positionClass: "toast-top-center",
         backgroundColor: "#ff0000",
       });
       isValid = false;
@@ -117,7 +121,7 @@ form.addEventListener("submit", function (e) {
           "Thank you for filling out the form, your Data has been saved!",
           "Success",
           {
-            positionClass: "toast-top-right",
+            positionClass: "toast-top-center",
             // backgroundColor: "#ff0000",
           }
         );
@@ -131,7 +135,7 @@ form.addEventListener("submit", function (e) {
       },
       function (error) {
         toastr.error("Something went wrong!", "Error", {
-          positionClass: "toast-top-right",
+          positionClass: "toast-top-center",
         });
       }
     );
