@@ -1,14 +1,3 @@
-// Add an event listener to the button
-document.getElementById("submitButton").addEventListener("click", function () {
-  // Refresh the page
-  location.reload();
-
-  // Scroll to the top of the page
-  window.scrollTo(0, 0);
-});
-
-
-
 // When option checked, show input area
 const showHiddenFields = (id, actionId, textCheck = null, select = false) => {
   const element = document.getElementById(id);
@@ -31,13 +20,14 @@ const showHiddenFields = (id, actionId, textCheck = null, select = false) => {
           action.style.display = "none";
         }
         break;
-        case "otherBoxFour":
-          if (element.value == "Round") {
-            action.style.display = "block";
-          } if (element.value == "Sharp") {
-            action.style.display = "Block";
-          }
-          break;
+      case "otherBoxFour":
+        if (element.value == "Round") {
+          action.style.display = "block";
+        }
+        if (element.value == "Sharp") {
+          action.style.display = "Block";
+        }
+        break;
 
       case "tearText":
         if (element.value == "yes") {
@@ -124,51 +114,51 @@ const checkForInput = () => {
   // https://dashboard.emailjs.com/admin/account
   emailjs.init("_mtDuxd9bNq3NiHj2");
 })();
-document
-  .getElementById("customer-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
 
-    checkForInput();
+const form = document.getElementById("customer-form");
 
-    // these IDs from the previous steps
-    emailjs.sendForm("service_9y1ve0g", "template_h7enjtb", this).then(
-      function () {
-        toastr.success(
-          "Thank you for filling out the form, your Data has been saved!",
-          "Success",
-          {
-            positionClass: "toast-top-right",
-            // backgroundColor: "#ff0000",
-          }
-        );
-      },
-      // function(){
-      //    // Refresh the page
-      //    location.reload();
+form.addEventListener("submit", function (e) {
+  console.log("here");
+  e.preventDefault();
 
-      //    // Scroll to the top of the page
-      //    window.scrollTo(0, 0);
-      // },
-      function (error) {
-        toastr.error("Something went wrong!", "Error", {
+  checkForInput();
+
+  // these IDs from the previous steps
+  emailjs.sendForm("service_9y1ve0g", "template_h7enjtb", this).then(
+    function () {
+      toastr.success(
+        "Thank you for filling out the form, your Data has been saved!",
+        "Success",
+        {
           positionClass: "toast-top-right",
-        });
-      }
-    );
-  });
+          // backgroundColor: "#ff0000",
+        }
+      );
 
-  // Not to make them all required.
+      setTimeout(function () {
+        location.reload();
+      }, 1500);
+      // form.reset();
+      // Scroll to the top of the page
+      window.scrollTo(0, 0);
+    },
+    function (error) {
+      toastr.error("Something went wrong!", "Error", {
+        positionClass: "toast-top-right",
+      });
+    }
+  );
+});
 
-  document.querySelectorAll(".valid").forEach(function(inputElement) {
-    inputElement.addEventListener("input", function() {
-      const label = this.nextElementSibling;
-      if (this.value.trim() !== "") {
-        label.classList.add("filled");
-      } else {
-        label.classList.remove("filled");
-      }
-    });
+// Not to make them all required.
+
+document.querySelectorAll(".valid").forEach(function (inputElement) {
+  inputElement.addEventListener("input", function () {
+    const label = this.nextElementSibling;
+    if (this.value.trim() !== "") {
+      label.classList.add("filled");
+    } else {
+      label.classList.remove("filled");
+    }
   });
-  
-  
+});

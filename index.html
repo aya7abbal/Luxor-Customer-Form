@@ -51,65 +51,99 @@
       <form id="customer-form" class="row g-3 shadow p-3 m-auto mx-md-5">
         <!-- Date -->
         <div class="col-md-6 input-container">
-          <input type="date" name="date" id="date" required class="valid py-2"/>
+          <input
+            type="date"
+            name="date"
+            id="date"
+            required
+            class="valid py-2"
+          />
 
           <label for="date" class="required">Today's Date </label>
         </div>
 
         <!-- Time -->
         <div class="col-md-6 input-container">
-          <input type="time" name="time" id="aptTime" class="valid py-2" required/>
+          <input
+            type="time"
+            name="time"
+            id="aptTime"
+            class="valid py-2"
+            required
+          />
           <label for="aptTime" class="required">Appointment Time</label>
         </div>
         <!-- Name -->
         <div class="col-12 col-md-6 input-container">
-          <input type="text" id="clientName" name="name" required class="valid" />
+          <input
+            type="text"
+            id="clientName"
+            name="name"
+            required
+            class="valid"
+          />
           <label for="name" class="required">Name</label>
         </div>
         <!--Email -->
         <div class="col-md-6 col-12 input-container">
-          <input type="email" name="email" required id="email"  class="valid"/>
+          <input type="email" name="email" required id="email" class="valid" />
           <label for="email" class="required">Email</label>
         </div>
         <!-- Address -->
         <div class="col-12 input-container">
-          <input type="text" name="address" required id="address" class="valid"/>
+          <input
+            type="text"
+            name="address"
+            required
+            id="address"
+            class="valid"
+          />
           <label for="address" class="required">Address Line 1</label>
         </div>
         <div class="col-12 col-md-6 input-container">
-          <input type="text" name="city" required id="city" class="valid"/>
+          <input type="text" name="city" required id="city" class="valid" />
           <label for="city" class="required">City</label>
         </div>
         <div class="col-12 col-md-6 input-container">
-          <input type="text" name="zipcode" required id="zipcode" class="valid"/>
+          <input
+            type="text"
+            name="zipcode"
+            required
+            id="zipcode"
+            class="valid"
+          />
           <label for="zipcode" class="required">Zip Code</label>
         </div>
         <div class="col-12 col-md-6 input-container">
-          <input type="text" name="state" required id="state"class="valid" />
+          <input type="text" name="state" required id="state" class="valid" />
           <label for="state" class="required">State</label>
         </div>
 
         <!-- Phone Number -->
         <div class="col-md-6 col-12 input-container">
-          <input type="number" name="mobile" id="mobile" required  class="valid"/>
+          <input
+            type="number"
+            name="mobile"
+            id="mobile"
+            required
+            class="valid"
+          />
           <label for="mobile" class="required">Phone Number</label>
         </div>
         <!-- Cont. Ref. -->
         <div class="col-12 input-container">
-          <input type="text" id="contRef" name="cont-ref"  class="valid"/>
+          <input type="text" id="contRef" name="cont-ref" class="valid" />
           <label for="contRef">Cont. Ref.</label>
         </div>
 
         <!-- Sales Consultant -->
-        <div class="col-12 ">
-
+        <div class="col-12">
           <label for="cons" class="required">Luxor's Sales Specialist:</label>
-          
+
           <select id="cons" name="specialist" class="form-select" required>
             <option selected value="">Choose one ...</option>
-            <option  value="Amr Talaat">Amr Talaat</option>
-            <option  value="Tristen Dwumah">Tristen Dwumah</option>
-            
+            <option value="Amr Talaat">Amr Talaat</option>
+            <option value="Tristen Dwumah">Tristen Dwumah</option>
           </select>
         </div>
 
@@ -138,7 +172,7 @@
             <option value="Other">Other</option>
           </select>
           <div id="otherBox" style="display: none">
-            If other: <input name="other" type="text"  />
+            If other: <input name="other" type="text" />
           </div>
         </div>
         <!-- Material Selection -->
@@ -174,79 +208,81 @@
         <!-- Sink Check -->
         <div class="col-12">
           <div class="form-check">
-            <div class="label"><label class="form-check-label" for="sinkCheck">
-              Do you have a sink?</label
-            ></div>
-           <div class="form-check-checkbox">
-            <div class="yes">
-              <div>Yes</div>
-              <div class="cbx"></div>
-              <input
-                id="svgOn"
-                name="have-sink"
-                type="checkbox"
-                value="yes"
-                onClick="showHiddenFields('svgOn', 'checkText')"
-              />
-              <label for="cbxYes"></label>
-              <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
-                <path d="M2 8.36364L6.23077 12L13 2"></path>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                <defs>
-                  <filter id="goo">
-                    <fegaussianblur
-                      in="SourceGraphic"
-                      stddeviation="4"
-                      result="blur"
-                    ></fegaussianblur>
-                    <fecolormatrix
-                      in="blur"
-                      mode="matrix"
-                      values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
-                      result="goo"
-                    ></fecolormatrix>
-                    <feblend in="SourceGraphic" in2="goo"></feblend>
-                  </filter>
-                </defs>
-              </svg>
+            <div class="label">
+              <label class="form-check-label" for="sinkCheck">
+                Do you have a sink?</label
+              >
             </div>
+            <div class="form-check-checkbox">
+              <div class="yes">
+                <div>Yes</div>
+                <div class="cbx"></div>
+                <input
+                  id="svgOn"
+                  name="have-sink"
+                  type="checkbox"
+                  value="yes"
+                  onClick="showHiddenFields('svgOn', 'checkText')"
+                />
+                <label for="cbxYes"></label>
+                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                  <path d="M2 8.36364L6.23077 12L13 2"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <defs>
+                    <filter id="goo">
+                      <fegaussianblur
+                        in="SourceGraphic"
+                        stddeviation="4"
+                        result="blur"
+                      ></fegaussianblur>
+                      <fecolormatrix
+                        in="blur"
+                        mode="matrix"
+                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                        result="goo"
+                      ></fecolormatrix>
+                      <feblend in="SourceGraphic" in2="goo"></feblend>
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
 
-            <div class="no">
-              <div>No</div>
-              <div class="cbx"></div>
-              <input
-                id="svgOff"
-                name="no-sink"
-                onClick="showHiddenFields('svgOff', 'checkText')"
-                type="checkbox"
-                value="no"
-              />
-              <label for="cbx"></label>
-              <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
-                <path d="M2 8.36364L6.23077 12L13 2"></path>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                <defs>
-                  <filter id="goo">
-                    <fegaussianblur
-                      in="SourceGraphic"
-                      stddeviation="4"
-                      result="blur"
-                    ></fegaussianblur>
-                    <fecolormatrix
-                      in="blur"
-                      mode="matrix"
-                      values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
-                      result="goo"
-                    ></fecolormatrix>
-                    <feblend in="SourceGraphic" in2="goo"></feblend>
-                  </filter>
-                </defs>
-              </svg>
+              <div class="no">
+                <div>No</div>
+                <div class="cbx"></div>
+                <input
+                  id="svgOff"
+                  name="no-sink"
+                  onClick="showHiddenFields('svgOff', 'checkText')"
+                  type="checkbox"
+                  value="no"
+                />
+                <label for="cbx"></label>
+                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                  <path d="M2 8.36364L6.23077 12L13 2"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <defs>
+                    <filter id="goo">
+                      <fegaussianblur
+                        in="SourceGraphic"
+                        stddeviation="4"
+                        result="blur"
+                      ></fegaussianblur>
+                      <fecolormatrix
+                        in="blur"
+                        mode="matrix"
+                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                        result="goo"
+                      ></fecolormatrix>
+                      <feblend in="SourceGraphic" in2="goo"></feblend>
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
             </div>
-           </div>
-           <!-- Additional Text -->
+            <!-- Additional Text -->
           </div>
           <div id="checkText" style="display: none">
             <br />
@@ -268,77 +304,81 @@
         <!-- Faucet Check -->
         <div class="col-12">
           <div class="form-check">
-            <div class="label">  <label class="form-check-label" for="sinkCheck">
-              Do you have a Faucet?</label
-            ></div>
-          
-           <div class="form-check-checkbox"> <div class="yes">
-            <div>Yes</div>
-            <div class="cbx"></div>
-            <input
-              id="faucetYes"
-              name="yes-faucet"
-              type="checkbox"
-              value="yes"
-              onClick="showHiddenFields('faucetYes', 'checkFaucet')"
-            />
-            <label for="cbxYes"></label>
-            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
-              <path d="M2 8.36364L6.23077 12L13 2"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-              <defs>
-                <filter id="goo">
-                  <fegaussianblur
-                    in="SourceGraphic"
-                    stddeviation="4"
-                    result="blur"
-                  ></fegaussianblur>
-                  <fecolormatrix
-                    in="blur"
-                    mode="matrix"
-                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
-                    result="goo"
-                  ></fecolormatrix>
-                  <feblend in="SourceGraphic" in2="goo"></feblend>
-                </filter>
-              </defs>
-            </svg>
-          </div>
+            <div class="label">
+              <label class="form-check-label" for="sinkCheck">
+                Do you have a Faucet?</label
+              >
+            </div>
 
-          <div class="no">
-            <div>No</div>
-            <div class="cbx"></div>
-            <input
-              id="faucetNo"
-              name="no-faucet"
-              type="checkbox"
-              value="no"
-              onClick="showHiddenFields('faucetNo', 'checkFaucet')"
-            />
-            <label for="cbx"></label>
-            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
-              <path d="M2 8.36364L6.23077 12L13 2"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-              <defs>
-                <filter id="goo">
-                  <fegaussianblur
-                    in="SourceGraphic"
-                    stddeviation="4"
-                    result="blur"
-                  ></fegaussianblur>
-                  <fecolormatrix
-                    in="blur"
-                    mode="matrix"
-                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
-                    result="goo"
-                  ></fecolormatrix>
-                  <feblend in="SourceGraphic" in2="goo"></feblend>
-                </filter>
-              </defs>
-            </svg>
-          </div></div>
+            <div class="form-check-checkbox">
+              <div class="yes">
+                <div>Yes</div>
+                <div class="cbx"></div>
+                <input
+                  id="faucetYes"
+                  name="yes-faucet"
+                  type="checkbox"
+                  value="yes"
+                  onClick="showHiddenFields('faucetYes', 'checkFaucet')"
+                />
+                <label for="cbxYes"></label>
+                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                  <path d="M2 8.36364L6.23077 12L13 2"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <defs>
+                    <filter id="goo">
+                      <fegaussianblur
+                        in="SourceGraphic"
+                        stddeviation="4"
+                        result="blur"
+                      ></fegaussianblur>
+                      <fecolormatrix
+                        in="blur"
+                        mode="matrix"
+                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                        result="goo"
+                      ></fecolormatrix>
+                      <feblend in="SourceGraphic" in2="goo"></feblend>
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
+
+              <div class="no">
+                <div>No</div>
+                <div class="cbx"></div>
+                <input
+                  id="faucetNo"
+                  name="no-faucet"
+                  type="checkbox"
+                  value="no"
+                  onClick="showHiddenFields('faucetNo', 'checkFaucet')"
+                />
+                <label for="cbx"></label>
+                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                  <path d="M2 8.36364L6.23077 12L13 2"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <defs>
+                    <filter id="goo">
+                      <fegaussianblur
+                        in="SourceGraphic"
+                        stddeviation="4"
+                        result="blur"
+                      ></fegaussianblur>
+                      <fecolormatrix
+                        in="blur"
+                        mode="matrix"
+                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                        result="goo"
+                      ></fecolormatrix>
+                      <feblend in="SourceGraphic" in2="goo"></feblend>
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
         <!-- Corner -->
@@ -346,220 +386,219 @@
           <label for="corner" class="required">Corner</label>
         </div>
         <select
-        id="corner"
-        name="corner" required
-        class="form-select input-container valid"
-        onchange="showHiddenFields('corner','otherBoxFour','Round')" 
-      >
-        <option selected value="">Choose one ...</option>
-        <option  value="Round">Round</option>
-        <option value="Sharp">Sharp</option>
-      </select>
-      <div id="otherBoxFour" class="" style="display: none">
-        Angle Radius Desired:
-        <br />
-        <input name="corner" type="number" class="valid"/>
-        <br />
-      </div>
-
-      
+          id="corner"
+          name="corner"
+          required
+          class="form-select input-container valid"
+          onchange="showHiddenFields('corner','otherBoxFour','Round')"
+        >
+          <option selected value="">Choose one ...</option>
+          <option value="Round">Round</option>
+          <option value="Sharp">Sharp</option>
+        </select>
+        <div id="otherBoxFour" class="" style="display: none">
+          Angle Radius Desired:
+          <br />
+          <input name="corner" type="number" class="valid" min="1" />
+          <br />
+        </div>
 
         <!-- Tear Out Check -->
         <div class="col-12">
           <div class="form-check">
-        <div class="label">    <label class="form-check-label" for="tearCheck">
-          <span>Do you want us to tear </span> <br />
-          <span> out your old countertop.</span></label
-        ></div>
-           <div class="form-check-checkbox">
-            <div class="yes">
-              <div>Yes</div>
-              <div class="cbx"></div>
-              <input
-                type="checkbox"
-                name="teardown"
-                id="tearYes"
-                onClick="showHiddenFields('tearYes', 'tearText')"
-                value="yes"
-              />
-              <label for="cbxYes"></label>
-              <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
-                <path d="M2 8.36364L6.23077 12L13 2"></path>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                <defs>
-                  <filter id="goo">
-                    <fegaussianblur
-                      in="SourceGraphic"
-                      stddeviation="4"
-                      result="blur"
-                    ></fegaussianblur>
-                    <fecolormatrix
-                      in="blur"
-                      mode="matrix"
-                      values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
-                      result="goo"
-                    ></fecolormatrix>
-                    <feblend in="SourceGraphic" in2="goo"></feblend>
-                  </filter>
-                </defs>
-              </svg>
+            <div class="label">
+              <label class="form-check-label" for="tearCheck">
+                <span>Do you want us to tear </span> <br />
+                <span> out your old countertop.</span></label
+              >
             </div>
+            <div class="form-check-checkbox">
+              <div class="yes">
+                <div>Yes</div>
+                <div class="cbx"></div>
+                <input
+                  type="checkbox"
+                  name="teardown"
+                  id="tearYes"
+                  onClick="showHiddenFields('tearYes', 'tearText')"
+                  value="yes"
+                />
+                <label for="cbxYes"></label>
+                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                  <path d="M2 8.36364L6.23077 12L13 2"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <defs>
+                    <filter id="goo">
+                      <fegaussianblur
+                        in="SourceGraphic"
+                        stddeviation="4"
+                        result="blur"
+                      ></fegaussianblur>
+                      <fecolormatrix
+                        in="blur"
+                        mode="matrix"
+                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                        result="goo"
+                      ></fecolormatrix>
+                      <feblend in="SourceGraphic" in2="goo"></feblend>
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
 
-            <div class="no">
-              <div>No</div>
-              <div class="cbx">
+              <div class="no">
+                <div>No</div>
+                <div class="cbx"></div>
+                <input
+                  type="checkbox"
+                  name="no-teardown"
+                  id="tearNo"
+                  onClick="showHiddenFields('tearNo', 'tearText')"
+                  value="no"
+                />
+                <label for="cbx"></label>
+                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                  <path d="M2 8.36364L6.23077 12L13 2"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <defs>
+                    <filter id="goo">
+                      <fegaussianblur
+                        in="SourceGraphic"
+                        stddeviation="4"
+                        result="blur"
+                      ></fegaussianblur>
+                      <fecolormatrix
+                        in="blur"
+                        mode="matrix"
+                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                        result="goo"
+                      ></fecolormatrix>
+                      <feblend in="SourceGraphic" in2="goo"></feblend>
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
             </div>
-            <input
-              type="checkbox"
-              name="no-teardown"
-              id="tearNo"
-              onClick="showHiddenFields('tearNo', 'tearText')"
-              value="no"
-            />
-            <label for="cbx"></label>
-            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
-              <path d="M2 8.36364L6.23077 12L13 2"></path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-              <defs>
-                <filter id="goo">
-                  <fegaussianblur
-                    in="SourceGraphic"
-                    stddeviation="4"
-                    result="blur"
-                  ></fegaussianblur>
-                  <fecolormatrix
-                    in="blur"
-                    mode="matrix"
-                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
-                    result="goo"
-                  ></fecolormatrix>
-                  <feblend in="SourceGraphic" in2="goo"></feblend>
-                </filter>
-              </defs>
-            </svg>
           </div>
-           </div>
-          
-        </div>
-        <div id="tearText" style="display: none" class="mt-3">
-
-          What Type?
-          <select
-            id="tearType"
-            name="surface-type"
-            required
-            class="form-select input-container"
-            
-          >
-          <option value="">Choose One...</option>
-            <option value="Solid Surface">Solid Surface</option>
-            <option value="Wooden Material">Wooden Material</option>
-          </select>
-        </div>
-
-        <!-- Backsplash-->
-        <div class="col-12 mt-4">
-          <label for="backsplash" class="form-label required">
-            Backsplash</label
-          >
-          <select
-            id="backsplash"
-            name="backsplash"
-            class="form-select"
-            required
-          >
-            <option selected value="">Choose one ...</option>
-            <option  value="No Backsplash">No Backsplash</option>
-            <option value="4 Inches">4" Standard</option>
-            <option value="6 Inches">6" High Profile</option>
-            <option value="Full">Full backsplash</option>
-          </select>
-        </div>
-        <!-- Stove Type -->
-        <div class=" col-12 mt-3">
-          <label for="stoveType" class="form-label"> Stove Type</label>
-          <select
-            id="stoveType"
-            name="stove-type"
-            class="form-select input-container"
-          >
-            <option selected>Choose one ...</option>
-            <option>Range not cut out</option>
-            <option>Cooktop Cut-out</option>
-          </select>
-        </div>
-        <!--Area-->
-        <div class="col-12 input-container">
-          <input type="number" name="area" id="area" class="valid" />
-          <label for="area">Estimated Square Feet</label>
-        </div>
-        <!-- Cabinets Check -->
-        <div class="col-12">
-          <label for="“cabinets”" class="form-label"
-            >Cabinets Installed?
-          </label>
-          <select
-            id="cabinets"
-            name="cabinets"
-            class="form-select input-container"
-            onchange="showHiddenFields('cabinets','otherBoxTwo','New')"
-          >
-            <option selected value="">Choose one ...</option>
-            <option selected value="Existing">Existing</option>
-            <option value="New">New</option>
-          </select>
-          <div id="otherBoxTwo" style="display: none">
-            Cabinets' State?
-            <br />
+          <div id="tearText" style="display: none" class="mt-3">
+            What Type?
             <select
-              id="install"
-              name="cabinets-state"
-              onchange="showHiddenFields('install','otherBoxThree', true)"
+              id="tearType"
+              name="surface-type"
               class="form-select input-container"
-              required”
             >
-              <option selected value="">Choose one ...</option>
-              <option class="cabinets" value="Already Installed">
-                Already Installed
-              </option>
-              <option class="cabinets" value="To be installed">
-                To be installed
-              </option>
+              <option value="">Choose One...</option>
+              <option value="Solid Surface">Solid Surface</option>
+              <option value="Wooden Material">Wooden Material</option>
             </select>
           </div>
 
-          <div id="otherBoxThree" class="mb-3" style="display: none">
-            Date of Installation:
-            <br />
-            <input name="cabinets-date" type="date" class="valid"/>
-            <br />
+          <!-- Backsplash-->
+          <div class="col-12 mt-4">
+            <label for="backsplash" class="form-label required">
+              Backsplash</label
+            >
+            <select
+              id="backsplash"
+              name="backsplash"
+              class="form-select"
+              required
+            >
+              <option selected value="">Choose one ...</option>
+              <option value="No Backsplash">No Backsplash</option>
+              <option value="4 Inches">4" Standard</option>
+              <option value="6 Inches">6" High Profile</option>
+              <option value="Full">Full backsplash</option>
+            </select>
           </div>
-        </div>
+          <!-- Stove Type -->
+          <div class="col-12 mt-3">
+            <label for="stoveType" class="form-label"> Stove Type</label>
+            <select
+              id="stoveType"
+              name="stove-type"
+              class="form-select input-container"
+            >
+              <option selected>Choose one ...</option>
+              <option>Range not cut out</option>
+              <option>Cooktop Cut-out</option>
+            </select>
+          </div>
+          <!--Area-->
+          <div class="col-12 input-container">
+            <input type="number" name="area" id="area" class="valid" />
+            <label for="area">Estimated Square Feet</label>
+          </div>
+          <!-- Cabinets Check -->
+          <div class="col-12">
+            <label for="“cabinets”" class="form-label"
+              >Cabinets Installed?
+            </label>
+            <select
+              id="cabinets"
+              name="cabinets"
+              class="form-select input-container"
+              onchange="showHiddenFields('cabinets','otherBoxTwo','New')"
+            >
+              <option selected value="">Choose one ...</option>
+              <option selected value="Existing">Existing</option>
+              <option value="New">New</option>
+            </select>
+            <div id="otherBoxTwo" style="display: none">
+              Cabinets' State?
+              <br />
+              <select
+                id="install"
+                name="cabinets-state"
+                onchange="showHiddenFields('install','otherBoxThree', true)"
+                class="form-select input-container"
+                required”
+              >
+                <option selected value="">Choose one ...</option>
+                <option class="cabinets" value="Already Installed">
+                  Already Installed
+                </option>
+                <option class="cabinets" value="To be installed">
+                  To be installed
+                </option>
+              </select>
+            </div>
 
-        <!--Cost-->
-        <div class="col-12 input-container">
-          <input type="number" name="price" id="price" class="valid"/>
-          <label for="price">Desired Budget $</label>
-        </div>
-        <!-- Additional Details -->
-        <div class="col-12">
-          <label for="details" class="form-label"
-            >Additional Project Details</label
-          >
-          <textarea
-            class="form-control"
-            name="additional-details"
-            aria-label="With textarea"
-          ></textarea>
-        </div>
+            <div id="otherBoxThree" class="mb-3" style="display: none">
+              Date of Installation:
+              <br />
+              <input name="cabinets-date" type="date" class="valid" />
+              <br />
+            </div>
+          </div>
 
-        <!-- Submit Button -->
-        <div class="col-12 d-flex justify-content-center">
-          <button type="submit" class="btn button-1" id="submitButton">Submit</button>
+          <!--Cost-->
+          <div class="col-12 input-container">
+            <input type="number" name="price" id="price" class="valid" />
+            <label for="price">Desired Budget $</label>
+          </div>
+          <!-- Additional Details -->
+          <div class="col-12">
+            <label for="details" class="form-label"
+              >Additional Project Details</label
+            >
+            <textarea
+              class="form-control"
+              name="additional-details"
+              aria-label="With textarea"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="col-12 d-flex justify-content-center">
+            <button type="submit" class="btn button-1" id="submitButton">
+              Submit
+            </button>
+          </div>
+          <!-- /lc-block -->
         </div>
-        <!-- /lc-block -->
       </form>
     </div>
   </body>
