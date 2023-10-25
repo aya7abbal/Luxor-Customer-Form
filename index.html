@@ -57,6 +57,7 @@
             id="date"
             required
             class="valid py-2"
+            max=""
           />
 
           <label for="date" class="required">Today's Date </label>
@@ -589,7 +590,13 @@
           </div>
           <!--Area-->
           <div class="col-12 input-container">
-            <input type="number" name="area" id="area" class="valid" />
+            <input
+              type="text"
+              name="area"
+              id="area"
+              class="valid"
+              oninput="formatAreaInput(this)"
+            />
             <label for="area">Estimated Square Feet</label>
           </div>
           <!-- Cabinets Check -->

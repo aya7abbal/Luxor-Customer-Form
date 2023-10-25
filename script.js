@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const dateInput = document.getElementById("date");
+  const today = new Date().toISOString().split("T")[0];
+  dateInput.setAttribute("max", today);
+});
+
 // When option checked, show input area
 const showHiddenFields = (id, actionId, textCheck = null, select = false) => {
   const element = document.getElementById(id);
@@ -122,6 +128,14 @@ const formatPrice = (input) => {
     input.value = "$" + numericValue;
   }
 };
+
+function formatAreaInput(input) {
+  // Remove non-numeric characters
+  const numericValue = input.value.replace(/\D/g, "");
+
+  // Update the input value with the symbol
+  input.value = numericValue + " ft²";
+}
 
 const addCommas = (nStr) => {
   nStr += "";
