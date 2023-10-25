@@ -9,6 +9,7 @@ const showHiddenFields = (id, actionId, textCheck = null, select = false) => {
       document.getElementById("referralBox").style.display = "none";
     } else if (element.value.includes("Referral")) {
       document.getElementById("referralBox").style.display = "block";
+      document.getElementById("otherBox").style.display = "none";
     } else {
       action.style.display = "none";
       document.getElementById("referralBox").style.display = "none";
@@ -83,19 +84,6 @@ const toggleDisabled = (action, id, disableId) => {
     } else if (action.style.display === "block") action.style.display = "none";
   }
   disableElement.disabled = !disableElement.disabled;
-};
-
-const checkForSelected = () => {
-  const cabinetOptions = document.querySelectorAll("option.cabinets");
-  document.getElementById("install").addEventListener("change", function () {
-    const selectedOption = cabinetOptions[this.selectedIndex - 1];
-    if (selectedOption) {
-      const selectedValue = selectedOption.value;
-      if (selectedValue == "To be installed") {
-        console.log("test");
-      }
-    }
-  });
 };
 
 const checkForInput = () => {
