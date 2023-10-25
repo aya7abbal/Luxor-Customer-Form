@@ -157,7 +157,7 @@ const form = document.getElementById("customer-form");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log(checkForInput());
+  console.log("testing here");
   if (checkForInput()) {
     emailjs.sendForm("service_9y1ve0g", "template_h7enjtb", this).then(
       function () {
