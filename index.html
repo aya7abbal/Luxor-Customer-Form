@@ -140,11 +140,13 @@
         <!-- Phone Number -->
         <div class="col-md-6 col-12 input-container">
           <input
-            type="number"
+            type="tel"
             name="mobile"
             id="mobile"
             required
             class="valid data-req"
+            pattern="\d{3}-\d{3}-\d{4}"
+            oninput="formatPhoneNumber(this)"
           />
           <label for="mobile" class="required">Phone Number</label>
         </div>
@@ -186,16 +188,22 @@
             <option value="Google">Google</option>
             <option value="Facebook">Facebook</option>
             <option value="Instagram">Instagram</option>
+            <option value="social media">Other Social Media</option>
             <option value="Mail">Direct Mail</option>
             <option value="Television">Television</option>
             <option value="Billboard">Billboard</option>
             <option value="Customer Referral">Customer Referral</option>
             <option value="Employee Referral">Employee Referral</option>
-            <option value="social media">Other Social Media</option>
+            <option value="Contractor Referral">Contractor Referral</option>
+            <option value="Designer Referral">Designer Referral</option>
+            <option value="Walk by">Walk by</option>
             <option value="Other">Other</option>
           </select>
           <div id="otherBox" style="display: none">
             If other: <input name="other" type="text" />
+          </div>
+          <div id="referralBox" style="display: none">
+            Referral Name: <input name="referralName" type="text" />
           </div>
         </div>
         <!-- Countertop Date -->
@@ -203,7 +211,7 @@
         <div id="counter-top-date" class="mb-3 data-req">
           When would you like your countertop installed:
           <br />
-          <input name="cabinets-date" type="date" class="valid" />
+          <input name="countertop-date" type="date" class="valid" />
           <br />
         </div>
 
@@ -232,7 +240,13 @@
           <label for="color" class="form-label required">
             Your Color Choice</label
           >
-          <select id="color" name="color" class="form-select data-req" required>
+          <select
+            id="color"
+            name="color"
+            class="form-select data-req"
+            required
+            onchange="showHiddenFields('color','otherColor')"
+          >
             <option selected value="">Choose one ...</option>
             <option value="Shades of White">Shades of White</option>
             <option value="Shades of Brown">Shades of Brown</option>
@@ -240,7 +254,12 @@
             <option value="Shades of Blue">Shades of Blue</option>
             <option value="Shades of Green">Shades of Green</option>
             <option value="Shades of Black">Shades of Black</option>
+            <option value="other">Other Colors</option>
           </select>
+          <div id="otherColor" style="display: none">
+            <br />
+            If other: <input name="otherColor" type="text" />
+          </div>
         </div>
         <!-- Sink Check -->
         <div class="col-12">
@@ -568,14 +587,14 @@
               required
             >
               <option selected>Choose one ...</option>
-              <option>Range not cut out</option>
-              <option>Cooktop Cut-out</option>
+              <option>Slide in</option>
+              <option>Cooktop</option>
             </select>
           </div>
           <!--Area-->
           <div class="col-12 input-container">
-            <input type="number" name="area" id="area" class="valid" required />
-            <label for="area" class="required">Estimated Square Feet</label>
+            <input type="number" name="area" id="area" class="valid" />
+            <label for="area">Estimated Square Feet</label>
           </div>
           <!-- Cabinets Check -->
           <div class="col-12">
@@ -590,7 +609,7 @@
               onchange="showHiddenFields('cabinets','otherBoxTwo','New')"
             >
               <option selected value="">Choose one ...</option>
-              <option selected value="Existing">Existing</option>
+              <option value="Existing">Existing</option>
               <option value="New">New</option>
             </select>
             <div id="otherBoxTwo" style="display: none">
@@ -623,7 +642,13 @@
 
           <!--Cost-->
           <div class="col-12 input-container">
-            <input type="number" name="price" id="price" class="valid" />
+            <input
+              type="text"
+              name="price"
+              id="price"
+              class="valid"
+              oninput="formatPrice(this)"
+            />
             <label for="price">Desired Budget $</label>
           </div>
           <!-- Additional Details -->

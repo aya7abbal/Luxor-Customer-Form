@@ -2,7 +2,14 @@
 body {
   max-width: 100%;
   box-sizing: border-box;
+}
 
+@media (min-width: 1600px) {
+  body {
+    align-items: center;
+    max-width: 70%;
+    margin: 0 auto; /* Horizontally center the content */
+  }
 }
 
 .btn-submit {
@@ -68,20 +75,16 @@ form {
     justify-content: start;
     align-items: flex-start;
   }
-
 }
-.form-check-checkbox{
+.form-check-checkbox {
   padding: 10px 0px;
-
 }
-
 
 .no,
 .yes {
   $primary: #55b0e8;
   position: relative;
   margin: 4px 0px;
-
 
   input[type="checkbox"] {
     -webkit-appearance: none;

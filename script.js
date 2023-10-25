@@ -2,11 +2,16 @@
 const showHiddenFields = (id, actionId, textCheck = null, select = false) => {
   const element = document.getElementById(id);
   const action = document.getElementById(actionId);
+
   if (select)
     if (element.value == textCheck) {
       action.style.display = "block";
+      document.getElementById("referralBox").style.display = "none";
+    } else if (element.value.includes("Referral")) {
+      document.getElementById("referralBox").style.display = "block";
     } else {
       action.style.display = "none";
+      document.getElementById("referralBox").style.display = "none";
     }
   else {
     switch (actionId) {
@@ -54,6 +59,13 @@ const showHiddenFields = (id, actionId, textCheck = null, select = false) => {
           toggleDisabled(action, "faucetNo", "faucetNo");
         } else {
           toggleDisabled(action, "faucetYes", "faucetYes");
+        }
+        break;
+      case "otherColor":
+        if (element.value == "other") {
+          action.style.display = "block";
+        } else {
+          action.style.display = "none";
         }
         break;
     }
@@ -104,6 +116,36 @@ const checkForInput = () => {
   return isValid;
 };
 
+const formatPhoneNumber = (input) => {
+  let value = input.value.replace(/\D/g, ""); // Remove non-digit characters
+  if (value.length > 0) {
+    value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+  }
+  input.value = value;
+};
+
+const formatPrice = (input) => {
+  let numericValue = input.value.replace(/[^0-9]/g, "");
+
+  input.value = numericValue;
+  // Add commas every 3 digits
+  if (numericValue.length > 0) {
+    numericValue = addCommas(numericValue);
+    input.value = "$" + numericValue;
+  }
+};
+
+const addCommas = (nStr) => {
+  nStr += "";
+  const x = nStr.split(".");
+  let x1 = x[0];
+  const x2 = x.length > 1 ? "." + x[1] : "";
+  const rgx = /(\d+)(\d{3})/;
+  while (rgx.test(x1)) {
+    x1 = x1.replace(rgx, "$1" + "," + "$2");
+  }
+  return x1 + x2;
+};
 // ----------------------------------- Add Email Js Details ------------------------------------------- //
 
 (function () {
