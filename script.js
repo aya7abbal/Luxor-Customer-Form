@@ -148,6 +148,14 @@ const addCommas = (nStr) => {
   }
   return x1 + x2;
 };
+
+const formatTime = (time) => {
+  const timeParts = time.split(":");
+  const hours = parseInt(timeParts[0], 10);
+  const minutes = timeParts[1];
+  const amPm = hours >= 12 ? "PM" : "AM";
+  return `${(hours % 12).toString().padStart(2, "0")}:${minutes}`;
+};
 // ----------------------------------- Add Email Js Details ------------------------------------------- //
 
 (function () {
@@ -159,7 +167,9 @@ const form = document.getElementById("customer-form");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log("testing here");
+  let time = this.querySelector('input[name="time"]').value;
+  const formattedTime = formatTime(time);
+  this.querySelector('input[name="time"]').value = formattedTime;
   if (checkForInput()) {
     emailjs.sendForm("service_9y1ve0g", "template_h7enjtb", this).then(
       function () {
@@ -171,11 +181,9 @@ form.addEventListener("submit", function (e) {
             // backgroundColor: "#ff0000",
           }
         );
-
         setTimeout(function () {
           location.reload();
         }, 1500);
-
         // Scroll to the top of the page
         window.scrollTo(0, 0);
       },
