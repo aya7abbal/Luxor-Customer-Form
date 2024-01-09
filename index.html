@@ -15,6 +15,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script
@@ -51,29 +57,17 @@
       <form id="customer-form" class="row g-3 shadow p-3 m-auto mx-md-5">
         <!-- Date -->
         <div class="col-md-6 input-container">
-          <input
-            type="date"
-            name="date"
-            id="date"
-            required
-            class="valid py-2"
-            max=""
-          />
+          <input type="text" name="date" id="date" class="valid py-2" />
 
-          <label for="date" class="required">Today's Date </label>
+          <label for="date">Today's Date </label>
         </div>
 
         <!-- Time -->
         <div class="col-md-6 input-container">
-          <input
-            type="time"
-            name="time"
-            id="aptTime"
-            class="valid py-2"
-            required
-          />
-          <label for="aptTime" class="required">Appointment Time</label>
+          <input type="time" name="time" id="aptTime" class="valid py-2" />
+          <label for="aptTime">Appointment Time</label>
         </div>
+
         <!-- Name -->
         <div class="col-12 col-md-6 input-container">
           <input
@@ -154,14 +148,9 @@
 
         <!-- Sales Consultant -->
         <div class="col-12">
-          <label for="cons" class="required">Luxor's Sales Specialist:</label>
+          <label for="cons">Luxor's Sales Specialist:</label>
 
-          <select
-            id="cons"
-            name="specialist"
-            class="form-select data-req"
-            required
-          >
+          <select id="cons" name="specialist" class="form-select">
             <option selected value="">Choose one ...</option>
             <option value="Alex Talaat">Alex Talaat</option>
             <option value="Tristen Dwumah">Tristen Dwumah</option>
@@ -170,13 +159,12 @@
 
         <!-- Learn how -->
         <div class="col-12">
-          <label for="learnHow" class="form-label required data-req"
+          <label for="learnHow" class="form-label"
             >How did you learn about us?</label
           >
           <select
             id="learnHow"
             class="form-select input-container"
-            required
             name="social-media"
             onchange="showHiddenFields('learnHow','otherBox','Other', true)"
           >
@@ -204,7 +192,7 @@
         </div>
         <!-- Countertop Date -->
 
-        <div id="counter-top-date" class="mb-3 data-req">
+        <div id="counter-top-date" class="mb-3">
           When would you like your countertop installed:
           <br />
           <input name="countertop-date" type="date" class="valid" />
@@ -213,15 +201,10 @@
 
         <!-- Material Selection -->
         <div class="col-md-6">
-          <label for="material" class="form-label required"
+          <label for="material" class="form-label"
             >Your Material Selection...</label
           >
-          <select
-            id="material"
-            name="material"
-            class="form-select data-req"
-            required
-          >
+          <select id="material" name="material" class="form-select">
             <option selected value="">Choose one ...</option>
             <option value="Granite">Granite</option>
             <option value="Quartz">Quartz</option>
@@ -234,14 +217,11 @@
         </div>
         <!-- Color Choice -->
         <div class="col-md-6">
-          <label for="color" class="form-label required">
-            Your Color Choice</label
-          >
+          <label for="color" class="form-label"> Your Color Choice</label>
           <select
             id="color"
             name="color"
-            class="form-select data-req"
-            required
+            class="form-select"
             onchange="showHiddenFields('color','otherColor')"
           >
             <option selected value="">Choose one ...</option>
@@ -262,7 +242,7 @@
         <div class="col-12">
           <div class="form-check">
             <div class="label">
-              <label class="form-check-label required" for="sinkCheck">
+              <label class="form-check-label" for="sinkCheck">
                 Do you have a sink?</label
               >
             </div>
@@ -345,13 +325,8 @@
         </div>
         <!-- Edge Type -->
         <div class="col-12">
-          <label for="edge" class="form-label required"> Edge Type</label>
-          <select
-            id="edge"
-            name="edge-type"
-            class="form-select data-req"
-            required
-          >
+          <label for="edge" class="form-label"> Edge Type</label>
+          <select id="edge" name="edge-type" class="form-select">
             <option selected value="">Choose one ...</option>
             <option value="Eased">Eased Edge</option>
             <option value="Half Bull Nose">Half Bull Nose</option>
@@ -363,7 +338,7 @@
         <div class="col-12">
           <div class="form-check">
             <div class="label">
-              <label class="form-check-label required" for="sinkCheck">
+              <label class="form-check-label" for="sinkCheck">
                 Do you have a Faucet?</label
               >
             </div>
@@ -465,7 +440,7 @@
         <div class="col-12">
           <div class="form-check">
             <div class="label">
-              <label class="form-check-label required" for="tearCheck">
+              <label class="form-check-label" for="tearCheck">
                 <span>Do you want us to tearout </span> <br />
                 <span> your old countertop.</span></label
               >
@@ -555,15 +530,8 @@
 
           <!-- Backsplash-->
           <div class="col-12 mt-4">
-            <label for="backsplash" class="form-label required">
-              Backsplash</label
-            >
-            <select
-              id="backsplash"
-              name="backsplash"
-              class="form-select data-req"
-              required
-            >
+            <label for="backsplash" class="form-label"> Backsplash</label>
+            <select id="backsplash" name="backsplash" class="form-select">
               <option selected value="">Choose one ...</option>
               <option value="No Backsplash">No Backsplash</option>
               <option value="2 Inches">2" Low Profile</option>
@@ -574,14 +542,11 @@
           </div>
           <!-- Stove Type -->
           <div class="col-12 mt-3">
-            <label for="stoveType" class="form-label required">
-              Stove Type</label
-            >
+            <label for="stoveType" class="form-label"> Stove Type</label>
             <select
               id="stoveType"
               name="stove-type"
               class="form-select input-container"
-              required
             >
               <option selected>Choose one ...</option>
               <option>Slide in</option>
@@ -601,14 +566,13 @@
           </div>
           <!-- Cabinets Check -->
           <div class="col-12">
-            <label for="“cabinets”" class="form-label required"
+            <label for="“cabinets”" class="form-label"
               >Cabinets Installed?
             </label>
             <select
               id="cabinets"
               name="cabinets"
               class="form-select input-container"
-              required
               onchange="showHiddenFields('cabinets','otherBoxTwo','New')"
             >
               <option selected value="">Choose one ...</option>
@@ -623,7 +587,6 @@
                 name="cabinets-state"
                 onchange="showHiddenFields('install','otherBoxThree', true)"
                 class="form-select input-container"
-                required”
               >
                 <option selected value="">Choose one ...</option>
                 <option class="cabinets" value="Already Installed">
@@ -635,7 +598,7 @@
               </select>
             </div>
 
-            <div id="otherBoxThree" class="mb-3 data-req" style="display: none">
+            <div id="otherBoxThree" class="mb-3" style="display: none">
               Date of Installation:
               <br />
               <input name="cabinets-date" type="date" class="valid" />

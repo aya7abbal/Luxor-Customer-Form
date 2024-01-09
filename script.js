@@ -4,6 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
   dateInput.setAttribute("max", today);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const dateInput = document.getElementById("date");
+
+  flatpickr(dateInput, {
+    dateFormat: "m-d-Y",
+    maxDate: "today",
+  });
+});
+
+flatpickr("#aptTime", {
+  enableTime: true,
+  noCalendar: true,
+  dateFormat: "H:i",
+  time_24hr: true,
+});
+
 // When option checked, show input area
 const showHiddenFields = (id, actionId, textCheck = null, select = false) => {
   const element = document.getElementById(id);
