@@ -1,15 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const dateInput = document.getElementById("date");
-  const today = new Date().toISOString().split("T")[0];
-  dateInput.setAttribute("max", today);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const dateInput = document.getElementById("date");
 
   flatpickr(dateInput, {
     dateFormat: "m-d-Y",
-    maxDate: "today",
+    maxDate: "2024-12-31",
   });
 });
 

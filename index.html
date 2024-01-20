@@ -159,7 +159,7 @@
 
         <!-- Learn how -->
         <div class="col-12">
-          <label for="learnHow" class="form-label"
+          <label for="learnHow" class="form-label required"
             >How did you learn about us?</label
           >
           <select
@@ -167,6 +167,7 @@
             class="form-select input-container"
             name="social-media"
             onchange="showHiddenFields('learnHow','otherBox','Other', true)"
+            required
           >
             <option value="">Choose one...</option>
             <option value="Google">Google</option>
