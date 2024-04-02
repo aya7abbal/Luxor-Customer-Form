@@ -181,7 +181,7 @@ form.addEventListener("submit", function (e) {
   const formattedTime = formatTime(time);
   this.querySelector('input[name="time"]').value = formattedTime;
   if (checkForInput()) {
-    emailjs.sendForm("service_9y1ve0g", "template_h7enjtb", this).then(
+    emailjs.sendForm("service_y5h2pbp", "template_h7enjtb", this).then(
       function () {
         toastr.success(
           "Thank you for filling out the form, your Data has been saved!",
